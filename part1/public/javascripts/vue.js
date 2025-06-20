@@ -4,8 +4,6 @@ createApp({
   setup() {
     const dogImgUrl = ref('');
 
-    
-
     onMounted(() => {
       const xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = () => {
