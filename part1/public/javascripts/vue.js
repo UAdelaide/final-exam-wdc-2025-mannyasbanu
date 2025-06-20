@@ -3,6 +3,7 @@ const { createApp, ref, onMounted } = Vue;
 createApp({
   setup() {
     const dogImgUrl = ref('');
+    let buttons = [];
 
     function randomisePos(){
       buttons.forEach(button => {
