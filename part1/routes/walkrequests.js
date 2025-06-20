@@ -11,6 +11,7 @@ router.get('/open', async (req, res, next) => {
       FROM WalkRequests
       INNER JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id
       INNER JOIN Users ON Dogs.owner_id = Users.user_id
+      WHERE 
     `);
   } catch (error) {
     console.error(error);
