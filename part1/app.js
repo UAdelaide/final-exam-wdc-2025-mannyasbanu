@@ -14,7 +14,9 @@ var app = express();
 
 // Database pool
 const pool = mysql.createPool({
-  
+  host: 'localhost',
+  user: 'root',
+  password: '',
 })
 
 (async () => {
