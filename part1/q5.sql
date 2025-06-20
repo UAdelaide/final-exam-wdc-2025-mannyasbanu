@@ -11,5 +11,5 @@ VALUES ('Max', 'medium', (SELECT user_id FROM Users WHERE username = 'alice123')
 ('Bella', 'small', (SELECT user_id FROM Users WHERE username = 'carol123')),
 ('Bogbog', 'large', (SELECT user_id FROM Users WHERE username = 'carol123')),
 ('Minh', 'small', (SELECT user_id FROM Users WHERE username = 'aish')),
-('Max', 'medium', (SELECT user_id FROM Users WHERE username = 'aish'))
+('Guts', 'medium', (SELECT user_id FROM Users WHERE username = 'aish'))
 /*5 WALK REQUESTS*/
