@@ -10,8 +10,8 @@ createApp({
         if(!button) return;
         const xpos = Math.random() * 1000;
         const ypos = Math.random() * 1000;
-        const xsize
-        const ysize
+        const xsize = Math.random() * 100;
+        const ysize = Math.random() * 100;
         button.style.position = 'fixed';
         button.style.left = x + 'px';
         button.style.top = y + 'px';
