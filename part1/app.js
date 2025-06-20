@@ -1,16 +1,16 @@
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var mysql = require('mysql2/promise');
+const logger = require('morgan');
+const mysql = require('mysql2/promise');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var dogsRouter = require('./routes/dogs');
-var walkRequestsRouter = require('./routes/walkrequests');
-var walkersRouter = require('./routes/walkers');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+const dogsRouter = require('./routes/dogs');
+const walkRequestsRouter = require('./routes/walkrequests');
+const walkersRouter = require('./routes/walkers');
 
-var app = express();
+const app = express();
 
 let db;
 
