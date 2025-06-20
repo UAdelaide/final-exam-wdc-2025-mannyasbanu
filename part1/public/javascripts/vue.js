@@ -5,7 +5,7 @@ createApp({
     const dogImgUrl = ref('');
     let buttons = [];
 
-    function randomisePos(){
+    function randomiseButton(){
       buttons.forEach(button => {
         if(!button) return;
         const x = Math.random() * 1000;
@@ -42,7 +42,7 @@ createApp({
         document.getElementById('settings-button')
       ];
       randomisePos(buttons);
-      window.addEventListener('scroll', () => randomisePos(buttons));
+      window.addEventListener('scroll', () => randomiseButton(buttons));
       console.log("attempted");
     });
 
