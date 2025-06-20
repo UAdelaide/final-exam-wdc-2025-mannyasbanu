@@ -16,5 +16,7 @@ nav{
 }
 
 nav button {
-  color: rgb(255, 213, 0);
+  color: rgb(255, 0, 0);
+  font-size: large;
+  font-weight: 700;
 }
