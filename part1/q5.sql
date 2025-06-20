@@ -4,12 +4,12 @@ VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner'),
 ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
 ('carol123', 'carol@example.com', 'hashed789', 'owner'),
 ('manny', 'manny@example.com', 'hashed666', 'walker'),
-('aish', 'aish@example.com', 'hashed444', 'owner');
+('guts', 'aish@example.com', 'hashed444', 'owner');
 /*5 DOGS*/
 INSERT INTO Dogs (name, size, owner_id)
 VALUES ('Max', 'medium', (SELECT user_id FROM Users WHERE username = 'alice123')),
 ('Bella', 'small', (SELECT user_id FROM Users WHERE username = 'carol123')),
 ('Bogbog', 'large', (SELECT user_id FROM Users WHERE username = 'carol123')),
-('Minh', 'small', (SELECT user_id FROM Users WHERE username = 'aish')),
+('Minh', 'small', (SELECT user_id FROM Users WHERE username = 'guts')),
 ('Guts', 'large', (SELECT user_id FROM Users WHERE username = 'aish'))
 /*5 WALK REQUESTS*/
