@@ -20,7 +20,9 @@ createApp({
     });
 
     function randomisePos(){
-      
+      buttons.forEach(button => {
+        
+      })
     }
 
     return { dogImgUrl };
