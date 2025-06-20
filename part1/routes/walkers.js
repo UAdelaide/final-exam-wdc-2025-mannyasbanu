@@ -17,7 +17,8 @@ router.get('/summary', async (req, res, next) => {
       const ratings = await db.query(`
         SELECT COUNT(WalkRatings.rating_id)
         FROM WalkRatings
-        INNER JOIN Users ON WalkRatings.
+        INNER JOIN Users ON WalkRatings.walker_id = Users.user_id
+        WHERE Users.
       `);
     });
   } catch (error) {
