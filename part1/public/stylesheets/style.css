@@ -45,7 +45,7 @@ nav button:hover {
 }
 
 #about-section {
-  margin-top: 300vh; /* Push it far down */
+  margin-top: 300vh;
   padding: 50px;
   background-color: white;
   color: black;
