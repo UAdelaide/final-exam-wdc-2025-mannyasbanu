@@ -9,6 +9,7 @@ router.get('/open', async (req, res, next) => {
 
   } catch (error) {
     console.error(error);
+    res.status(400)
   }
 })
 
