@@ -44,7 +44,7 @@ let db;
         role ENUM('owner', 'walker') NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)
     `); // Dogs
-    await db.execute(`
+    await db.query(`
       CREATE TABLE Dogs (
         dog_id INT AUTO_INCREMENT PRIMARY KEY,
         owner_id INT NOT NULL,
@@ -52,7 +52,7 @@ let db;
         size ENUM('small', 'medium', 'large') NOT NULL,
         FOREIGN KEY (owner_id) REFERENCES Users(user_id))
     `); // WalkRequests
-    await db.execute(`
+    await db.query(`
       CREATE TABLE WalkRequests (
         request_id INT AUTO_INCREMENT PRIMARY KEY,
         dog_id INT NOT NULL,
@@ -63,7 +63,7 @@ let db;
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         FOREIGN KEY (dog_id) REFERENCES Dogs(dog_id))
     `); // WalkApplications
-    await db.execute(`
+    await db.query(`
       CREATE TABLE WalkApplications (
         application_id INT AUTO_INCREMENT PRIMARY KEY,
         request_id INT NOT NULL,
@@ -74,7 +74,7 @@ let db;
         FOREIGN KEY (walker_id) REFERENCES Users(user_id),
         CONSTRAINT unique_application UNIQUE (request_id, walker_id))
     `); // WalkRatings
-    await db.execute(`
+    await db.query(`
       CREATE TABLE WalkRatings (
         rating_id INT AUTO_INCREMENT PRIMARY KEY,
         request_id INT NOT NULL,
@@ -90,7 +90,7 @@ let db;
     `);
     // Insert data
     // Users
-    await db.execute(`
+    await db.query(`
       INSERT INTO Users (username, email, password_hash, role)
       VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner'),
       ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
@@ -98,7 +98,7 @@ let db;
       ('manny', 'manny@example.com', 'hashed666', 'walker'),
       ('guts', 'guts@example.com', 'hashed444', 'owner')
       `); //Dogs
-      await db.execute(`
+      await db.query(`
       INSERT INTO Dogs (name, size, owner_id)
       VALUES ('Max', 'medium', (SELECT user_id FROM Users WHERE username = 'alice123')),
       ('Bella', 'small', (SELECT user_id FROM Users WHERE username = 'carol123')),
@@ -106,7 +106,7 @@ let db;
       ('Minh', 'small', (SELECT user_id FROM Users WHERE username = 'guts')),
       ('Griffith', 'large', (SELECT user_id FROM Users WHERE username = 'guts'))
       `); // WalkRequests
-      await db.execute(`
+      await db.query(`
       INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
       VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Max' LIMIT 1), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
       ((SELECT dog_id FROM Dogs WHERE name = 'Bella' LIMIT 1), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
