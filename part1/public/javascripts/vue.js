@@ -10,6 +10,8 @@ const vueinst = new Vue({
       if(xhttp.readyState == 4 && xhttp.status == 200){
          const res = JSON.parse(xhttp.responseText());
          this.dogImgUrl = res[0];
+      } else {
+        console.log('failed to fetch dogImg')
       }
     }
 
