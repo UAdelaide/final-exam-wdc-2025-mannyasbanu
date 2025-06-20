@@ -47,5 +47,6 @@ nav button:hover {
 
 #settings-button {
   position: sticky;
-  top: ;
+  top: 90%;
+  left: 50%;
 }
