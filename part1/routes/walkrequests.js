@@ -6,9 +6,9 @@ const db = require('../db');
 // GET request for /api/walkrequests/open
 router.get('/open', async (req, res, next) => {
   try {
-    
-  } catch (error) {
 
+  } catch (error) {
+    console.error(error);
   }
 })
 
