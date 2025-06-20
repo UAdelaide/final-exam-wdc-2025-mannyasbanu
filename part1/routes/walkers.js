@@ -12,7 +12,7 @@ router.get('/summary', async (req, res, next) => {
       FROM Users
       WHERE role = 'walker';
     `);
-    res.json(walkers);
+    // Query total ratings
   } catch (error) {
     // Error handling
     console.error(error);
