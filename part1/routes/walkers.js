@@ -6,12 +6,13 @@ const db = require('../db');
 // GET request for /api/walkers/summary
 router.get('/summary', async (req, res, next) => {
   try {
-    // Query rows
-    const [rows] = await db.query(`
+    // Query walkers
+    const [walkers] = await db.query(`
       SELECT username AS walker_username
       FROM Users
       WHERE role = 'walker';
     `);
+    res.json(walkers);
   } catch (error) {
     // Error handling
     console.error(error);
