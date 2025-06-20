@@ -6,7 +6,8 @@ const db = require('../db');
 // GET request for /api/walkrequests/open
 router.get('/open', async (req, res, next) => {
   try {
-    const [rows] = await db.query()
+    const [rows] = await db.query(`
+      `)
   } catch (error) {
     console.error(error);
     res.status(400).json({ error: error.message });
