@@ -33,20 +33,7 @@ nav button:hover {
   left: 400px;
 }
 
-#about-button, #nav-button {
-  position: sticky;
-  bottom: 10%;
-  left: 40%;
-}
-
-#nav-button {
-  position: sticky;
-  top: 60%;
-  left: 80%;
-}
-
-#settings-button {
-  position: sticky;
-  top: 90%;
-  left: 50%;
+#about-button, #nav-button, #settings-button {
+  position: fixed;
+  transition: 0.3;
 }
