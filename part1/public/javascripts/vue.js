@@ -16,6 +16,11 @@ createApp({
       });
     }
 
+    function scrollToAbout() {
+      const about = document.getElementById('about-section');
+      if (about) about.scrollIntoView({ behavior: 'smooth' });
+}
+
     onMounted(() => {
       // Fetch dog image
       const xhttp = new XMLHttpRequest();
