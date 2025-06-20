@@ -1,0 +1,1 @@
+const vue = new VueInst
