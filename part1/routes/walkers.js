@@ -8,7 +8,7 @@ router.get('/summary', async (req, res, next) => {
   try {
     // Query rows
     const [rows] = await db.query(`
-      
+      SELECT 
     `);
   } catch (error) {
     // Error handling
