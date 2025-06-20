@@ -44,6 +44,6 @@ nav button:hover {
   font-size: 30px;
 }
 
-.about-section {
-  font-size: 5px;
+#about-section {
+  font-size: 10px;
 }
