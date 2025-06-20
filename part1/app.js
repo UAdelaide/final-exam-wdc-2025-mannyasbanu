@@ -13,7 +13,9 @@ var walkersRouter = require('./routes/walkers');
 var app = express();
 
 // Database pool
-const
+const pool = mysql.createPool({
+  
+})
 
 (async () => {
   try {
