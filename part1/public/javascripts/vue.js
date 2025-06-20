@@ -17,6 +17,7 @@ createApp({
     }
 
     onMounted(() => {
+      // Fetch dog image
       const xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = () => {
         if (xhttp.readyState === 4 && xhttp.status === 200) {
@@ -28,6 +29,9 @@ createApp({
       };
       xhttp.open('GET', 'https://dog.ceo/api/breeds/image/random', true);
       xhttp.send();
+
+      // Get buttons and randomise
+      
     });
 
     return { dogImgUrl };
