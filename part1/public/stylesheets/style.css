@@ -54,7 +54,7 @@ nav button:hover {
 }
 
 img {
-  animation: spin 5s linear infinite;
+  animation: spin 3s linear infinite;
 }
 
 @keyframes spin {
