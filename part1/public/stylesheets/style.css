@@ -23,3 +23,7 @@ nav button {
   bottom: 60px;
   left: 80px;
 }
+
+nav button:hover {
+  display: none;
+}
