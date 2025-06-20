@@ -52,3 +52,7 @@ nav button:hover {
   font-size: 20px;
   background-color: dimgray;
 }
+
+img {
+  animation: spin 5;
+}
