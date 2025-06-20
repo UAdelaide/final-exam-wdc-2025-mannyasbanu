@@ -9,9 +9,9 @@ VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner'),
 INSERT INTO Dogs (name, size, owner_id)
 VALUES ('Max', 'medium', (SELECT user_id FROM Users WHERE username = 'alice123')),
 ('Bella', 'small', (SELECT user_id FROM Users WHERE username = 'carol123')),
-('Bogbog', 'large', (SELECT user_id FROM Users WHERE username = 'carol123') ),
-('Minh', 'small', (SELECT user_id FROM Users WHERE username = 'guts') LIMIT 1),
-('Griffith', 'large', (SELECT user_id FROM Users WHERE username = 'guts' LIMIT 1));
+('Bogbog', 'large', (SELECT user_id FROM Users WHERE username = 'carol123')),
+('Minh', 'small', (SELECT user_id FROM Users WHERE username = 'guts')),
+('Griffith', 'large', (SELECT user_id FROM Users WHERE username = 'guts'));
 /*5 WALK REQUESTS*/
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
 VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Max' LIMIT 1), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
