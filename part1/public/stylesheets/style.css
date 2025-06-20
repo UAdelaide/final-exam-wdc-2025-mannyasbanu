@@ -36,4 +36,6 @@ nav button:hover {
 #about-button, #nav-button, #settings-button {
   position: fixed;
   transition: 0.3s;
+  border-radius: 50px;
+  height: ;
 }
