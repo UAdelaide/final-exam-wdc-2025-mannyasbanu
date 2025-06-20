@@ -6,7 +6,7 @@ const db = require('../db');
 // GET request for /api/walkers/summary
 router.get('/summary', async (req, res, next) => {
   try {
-    // Query walkers
+    // Query rows
     
   } catch (error) {
     // Error handling
