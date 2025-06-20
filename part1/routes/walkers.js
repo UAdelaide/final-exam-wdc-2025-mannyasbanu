@@ -18,6 +18,7 @@ router.get('/summary', async (req, res, next) => {
       WHERE Users.role = 'walker'
       GROUP BY Users.user_id;
     `);
+    res.json(rows);
   } catch (error) {
     // Error handling
     console.error(error);
