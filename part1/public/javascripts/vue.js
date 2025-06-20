@@ -19,6 +19,10 @@ createApp({
       xhttp.send();
     });
 
+    function randomisePos(){
+      
+    }
+
     return { dogImgUrl };
   }
 }).mount('#app');
