@@ -45,10 +45,5 @@ nav button:hover {
 }
 
 #about-section {
-  margin-top: 300vh;
-  padding: 50px;
-  background-color: white;
-  color: black;
   font-size: 20px;
-  text-align: center;
 }
