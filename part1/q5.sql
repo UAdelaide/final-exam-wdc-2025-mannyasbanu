@@ -18,4 +18,4 @@ VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Max'), 2025-06-10 08:00:00, 30, '
 ((SELECT dog_id FROM Dogs WHERE name = 'Bella'), 2025-06-10 09:30:00, 45, 'Beachside Ave', 'accepted'),
 ((SELECT dog_id FROM Dogs WHERE name = 'Bogbog'), 2025-06-11 08:00:00, 10, 'The Evil Swamp', 'open'),
 ((SELECT dog_id FROM Dogs WHERE name = 'Minh'), 2025-06-12 10:00:00, 70, 'Sofras AB', 'accepted'),
-((SELECT dog_id FROM Dogs WHERE name = 'Griffith'), 2025-06-9 08:00:00, 5, 'The', 'completed');
+((SELECT dog_id FROM Dogs WHERE name = 'Griffith'), 2025-06-9 08:00:00, 5, 'The Graveyard', 'completed');
