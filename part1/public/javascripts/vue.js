@@ -11,10 +11,10 @@ const vueinst = new Vue({
          const res = JSON.parse(xhttp.responseText());
          this.dogImgUrl = res[0];
       } else {
-        console.log('failed to fetch dogImg')
+        console.log('failed to fetch dogImg');
       }
-    }
-
+    };
+    xhttp.
   },
   methods: {
   }
