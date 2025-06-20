@@ -3,6 +3,8 @@ const router = express.Router();
 // Import pool
 const db = require('../db');
 
-router.get('/', async ())
+router.get('/', async (req, res, next) => {
+  
+})
 
 module.exports = router;
