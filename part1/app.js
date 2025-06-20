@@ -21,7 +21,7 @@ let db;
     });
 
     // Drop and create the database
-    await connection.query('DROP DATABASE IF EXISTS DogWalkService;');
+    await connection.query('DROP DATABASE IF EXISTS DogWalkService');
     await connection.end();
 
     // Now connect to the created database
