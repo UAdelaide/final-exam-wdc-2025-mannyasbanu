@@ -18,7 +18,7 @@ createApp({
 
     function scrollToAbout() {
       const about = document.getElementById('about-section');
-      if (about) about.scrollIntoView({ behavior: 'smooth' });
+      about.scrollIntoView();
     }
 
     onMounted(() => {
