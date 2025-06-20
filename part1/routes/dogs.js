@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const db = 
-
+// 
+const db = require('../db');
 
 module.exports = router;
