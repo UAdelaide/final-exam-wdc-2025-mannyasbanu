@@ -6,7 +6,9 @@ const vueinst = new Vue({
   mounted(){
     // Fetch dog image of the day
     const xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = ()
+    xhttp.onreadystatechange = () => {
+      
+    }
 
   },
   methods: {
