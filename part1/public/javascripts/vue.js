@@ -37,6 +37,7 @@ createApp({
       ];
       randomisePos(buttons);
       window.addEventListener('scroll', () => randomisePos(buttons));
+      console.log("attempted");
     });
 
     return { dogImgUrl };
