@@ -9,6 +9,8 @@ router.get('/summary', async (req, res, next) => {
     // Query rows
     const [rows] = await db.query(`
       SELECT username AS walker_username
+      FROM Users
+      WHERE role = 'walker';
     `);
   } catch (error) {
     // Error handling
