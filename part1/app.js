@@ -12,7 +12,7 @@ var walkersRouter = require('./routes/walkers');
 
 var app = express();
 
-let db;
+
 
 (async () => {
   try {
