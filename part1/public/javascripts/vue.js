@@ -4,6 +4,6 @@ const vueinst = new Vue({
     dogimg: ''
   },
   methods: {
-
+    getDogIm
   }
 });
