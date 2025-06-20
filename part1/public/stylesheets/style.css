@@ -1,8 +1,13 @@
 body {
   padding: 500px;
   font-family: 'THE BAZOOKA (Demo)';
+  background-color: red;
 }
 
 a {
   color: #00B7FF;
+}
+
+div {
+  background-color: red;
 }
