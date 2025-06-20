@@ -36,7 +36,8 @@ createApp({
         document.getElementById('nav-button');
         document.getElementById('settings-button');
       ];
-      randomisePos
+      randomisePos(buttons);
+      window.addEventListener('scroll', ()=> randomisePos(buttons));
     });
 
     return { dogImgUrl };
