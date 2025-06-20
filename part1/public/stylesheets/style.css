@@ -35,7 +35,7 @@ nav button:hover {
 
 #about-button, #nav-button, #settings-button {
   position: fixed;
-  transition: 0.3s ease;
+  transition: 0.1s;
   border-radius: 50px;
   height: 50px;
   background-color: rgb(34, 0, 255);
@@ -45,6 +45,6 @@ nav button:hover {
 }
 
 #about-section {
-  
+
   font-size: 20px;
 }
