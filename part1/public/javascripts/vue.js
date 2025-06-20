@@ -8,13 +8,14 @@ createApp({
     function randomiseButton(){
       buttons.forEach(button => {
         if(!button) return;
-        const xpos = Math.random() * 1000;
-        const ypos = Math.random() * 1000;
+        const xpos = Math.random() * 2000;
+        const ypos = Math.random() * 2000;
         const xsize = Math.random() * 100;
         const ysize = Math.random() * 100;
         button.style.position = 'fixed';
-        button.style.left = x + 'px';
-        button.style.top = y + 'px';
+        button.style.left = xpos + 'px';
+        button.style.top = ypos + 'px';
+        button.style
       });
     }
 
