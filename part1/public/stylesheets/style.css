@@ -19,4 +19,6 @@ nav button {
   color: rgb(255, 0, 0);
   font-size: large;
   font-weight: 1000;
+  position: relative;
+  top: 50px;
 }
