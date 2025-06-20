@@ -32,9 +32,9 @@ createApp({
 
       // Get buttons and randomise
       const buttons = [
-        document.getElementById('about-button');
-        document.getElementById('nav-button');
-        document.getElementById('settings-button');
+        document.getElementById('about-button'),
+        document.getElementById('nav-button'),
+        document.getElementById('settings-button')
       ];
       randomisePos(buttons);
       window.addEventListener('scroll', ()=> randomisePos(buttons));
