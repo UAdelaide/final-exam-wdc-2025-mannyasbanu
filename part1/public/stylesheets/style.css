@@ -35,12 +35,12 @@ nav button:hover {
 
 #about-button {
   position: sticky;
-  top: 550px;
-  left: 120px;
+  top: 10%;
+  left: 40%;
 }
 
 #nav-button {
   position: sticky;
-  top: 660px;
-  left: 620px;
+  top: 60%;
+  left: 80%;
 }
