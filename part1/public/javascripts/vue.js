@@ -10,6 +10,7 @@ createApp({
         if(!button) return;
         const x = Math.random() * 1000;
         const y = Math.random() * 1000;
+        
         button.style.position = 'fixed';
         button.style.left = x + 'px';
         button.style.top = y + 'px';
@@ -41,7 +42,7 @@ createApp({
         document.getElementById('nav-button'),
         document.getElementById('settings-button')
       ];
-      randomisePos(buttons);
+      randomiseButton(buttons);
       window.addEventListener('scroll', () => randomiseButton(buttons));
       console.log("attempted");
     });
