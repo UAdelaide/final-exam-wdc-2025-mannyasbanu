@@ -6,5 +6,5 @@ VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner'),
 ('manny', 'manny@example.com', 'hashed666', 'walker'),
 ('aish', 'aish@example.com', 'hashed444', 'owner');
 /*5 DOGS*/
-INSERT INTO Dogs (n)
+INSERT INTO Dogs (name, size, owner_id)
 /*5 WALK REQUESTS*/
