@@ -37,5 +37,6 @@ nav button:hover {
   position: fixed;
   transition: 0.3s;
   border-radius: 50px;
-  height: ;
+  height: 50px;
+  background-color: ;
 }
