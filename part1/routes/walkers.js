@@ -7,7 +7,7 @@ const db = require('../db');
 router.get('/summary', async (req, res, next) => {
   try {
     // Query walkers
-    var [walkers] = await db.query(`
+    const [walkers] = await db.query(`
       SELECT username AS walker_username
       FROM Users
       WHERE role = 'walker';
