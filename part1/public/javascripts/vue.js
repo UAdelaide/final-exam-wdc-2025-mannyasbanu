@@ -5,6 +5,7 @@ const vueinst = new Vue({
   },
   mounted(){
     // Fetch dog image of the day
+    xhttp = new XMLHttpRequest();
     
   },
   methods: {
