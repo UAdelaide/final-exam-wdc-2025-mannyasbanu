@@ -20,7 +20,7 @@ let db;
       password: ''
     });
 
-    // Create the database if it doesn't exist
+    // Create the database
     await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
     await connection.end();
 
