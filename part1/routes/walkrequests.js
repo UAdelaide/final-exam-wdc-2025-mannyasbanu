@@ -9,7 +9,8 @@ router.get('/open', async (req, res, next) => {
     const [rows] = await db.query(`
       SELECT WalkRequests.request_id, Dogs.name AS dog_name, WalkRequests.requested_time, WalkRequests.duration_minutes, WalkRequests.location, Users.username AS owner_username
       FROM WalkRequests
-      INNER JOIN Dogs ON WalkRequests.dog_id
+      INNER JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id
+      
     `);
   } catch (error) {
     console.error(error);
