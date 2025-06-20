@@ -3,7 +3,7 @@ const router = express.Router();
 // Import pool
 const db = require('../db');
 
-// Get Request for /api/dogs
+// GET request for /api/dogs
 router.get('/', async (req, res, next) => {
   try {
     // Query rows

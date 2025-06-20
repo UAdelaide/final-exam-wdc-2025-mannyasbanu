@@ -3,6 +3,6 @@ const router = express.Router();
 // Import pool
 const db = require('../db');
 
-// GET request
+// GET request for 
 
 module.exports = router;
