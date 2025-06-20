@@ -114,7 +114,7 @@ let db;
       ((SELECT dog_id FROM Dogs WHERE name = 'Minh' LIMIT 1), '2025-06-12 10:00:00', 60, 'Sofras AB', 'accepted'),
       ((SELECT dog_id FROM Dogs WHERE name = 'Griffith' LIMIT 1), '2025-06-09 08:00:00', 5, 'The Graveyard', 'completed')
       `);
-      console.log('Database setup complete')
+      console.log('Database setup complete');
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
