@@ -12,7 +12,7 @@ createApp({
         const y = Math.random() * 1000;
         button.style.position = 'fixed';
         button.style.left = x;
-        button.style.top = y;
+        button.style.top = y + ;
       });
     }
 
