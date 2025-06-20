@@ -1,6 +1,7 @@
-const vue = new Vue({
-  el: "#app",
-  data: {
+const { createApp } = Vue;
+
+createApp({
+  data() {
     
   }
-});
+})
