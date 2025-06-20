@@ -7,7 +7,7 @@ const db = require('../db');
 router.get('/open', async (req, res, next) => {
   try {
     const [rows] = await db.query(`
-      SELECT WalkRequests.request_id, Dogs.name AS dog_name, WalkRequests.requested_time, WalkRequests.duration_minutes, WalkRequests.location, 
+      SELECT WalkRequests.request_id, Dogs.name AS dog_name, WalkRequests.requested_time, WalkRequests.duration_minutes, WalkRequests.location, Users.username AS owner_username
     `);
   } catch (error) {
     console.error(error);
