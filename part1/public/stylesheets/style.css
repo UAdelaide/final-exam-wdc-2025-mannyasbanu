@@ -14,3 +14,7 @@ nav{
   font-size: large;
   position: fixed;
 }
+
+nav button {
+  color: pink;
+}
