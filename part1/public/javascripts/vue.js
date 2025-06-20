@@ -22,7 +22,8 @@ createApp({
     function randomisePos(){
       buttons.forEach(button => {
         if(!button) return;
-        const x = 
+        const x = Math.random() * 1000;
+        const y = Math.random
       })
     }
 
