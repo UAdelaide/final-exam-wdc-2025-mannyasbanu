@@ -5,6 +5,7 @@ body {
   height: 10000px;
   color: black;
   font-size: 30px;
+  border: solid 50px;
 }
 
 a {
