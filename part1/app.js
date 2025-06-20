@@ -21,7 +21,7 @@ let db;
     });
 
     // Create the database
-    await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
+    await connection.query('source dogwalks.sql');
     await connection.end();
 
     // Now connect to the created database
@@ -29,7 +29,7 @@ let db;
       host: 'localhost',
       user: 'root',
       password: '',
-      database: 'testdb'
+      database: 'DogWalkService'
     });
 
     // Create a table if it doesn't exist
