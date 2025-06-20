@@ -36,5 +36,11 @@ nav button:hover {
 #about-button {
   position: sticky;
   top: 550px;
-  left: 100px;
+  left: 120px;
+}
+
+#nav-button {
+  position: sticky;
+  top: 660px;
+  left: 620px;
 }
