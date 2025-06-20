@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 // Import pool
-const db = require('../')
+const db = require('../db');
 
+// GET request
 
 module.exports = router;
