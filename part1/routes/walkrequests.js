@@ -3,6 +3,7 @@ const router = express.Router();
 // Import pool
 const db = require('../db');
 
-// GET request for 
+// GET request for /api/walkrequests/open
+router.get()
 
 module.exports = router;
