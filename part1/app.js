@@ -133,6 +133,6 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api/dogs', dogsRouter);
 app.use('/api/walkrequests', walkRequestsRouter);
-app.use('/api/dogs', walkersRouter);
+app.use('/api/walkers', walkersRouter);
 
 module.exports = app;
