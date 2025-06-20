@@ -5,6 +5,17 @@ createApp({
     const dogImgUrl = ref('');
     const buttons = [];
 
+    function randomisePos(){
+      buttons.forEach(button => {
+        if(!button) return;
+        const x = Math.random() * 1000;
+        const y = Math.random() * 1000;
+        button.style.position = 'fixed';
+        button.style.left = x;
+        button.style.top = y;
+      });
+    }
+
     onMounted(() => {
       const xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = () => {
@@ -18,8 +29,6 @@ createApp({
       xhttp.open('GET', 'https://dog.ceo/api/breeds/image/random', true);
       xhttp.send();
     });
-
-    
 
     return { dogImgUrl };
   }
