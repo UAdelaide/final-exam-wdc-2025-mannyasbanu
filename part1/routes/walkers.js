@@ -20,7 +20,7 @@ router.get('/summary', async (req, res, next) => {
         INNER JOIN Users ON WalkRatings.walker_id = Users.user_id
         WHERE Users.username = '?'
       `, [walker.username]);
-      walker.total_ratings = ratings;
+      walker.total_ratings = ratings[0];
     };
   } catch (error) {
     // Error handling
