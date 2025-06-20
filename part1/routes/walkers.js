@@ -14,7 +14,8 @@ router.get('/summary', async (req, res, next) => {
     `);
     // Query total ratings
     walkers.forEach(walker => {
-      const ratin
+      const ratings = await db.query(`
+        `);
     });
   } catch (error) {
     // Error handling
