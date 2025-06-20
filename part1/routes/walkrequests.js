@@ -7,7 +7,7 @@ const db = require('../db');
 router.get('/open', async (req, res, next) => {
   try {
     const [rows] = await db.query(`
-      SELECT
+      SELECT 
     `);
   } catch (error) {
     console.error(error);
