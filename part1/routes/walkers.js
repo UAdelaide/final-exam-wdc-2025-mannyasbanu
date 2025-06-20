@@ -13,7 +13,7 @@ router.get('/summary', async (req, res, next) => {
       WHERE role = 'walker';
     `);
     // Query total ratings
-    walkers.forEach(async (walker) => {
+    for (const walker of walkers) {
       const ratings = await db.query(`
         SELECT COUNT(WalkRatings.rating_id)
         FROM WalkRatings
