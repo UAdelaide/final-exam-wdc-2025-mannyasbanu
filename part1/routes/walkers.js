@@ -8,7 +8,7 @@ router.get('/summary', async (req, res, next) => {
   try {
     // Query rows
     const [rows] = await db.query(`
-      SELECT Users.username AS walker_username, COUNT (WalkRatings.rating_id) AS total_ratings, ROUND(AVG(WalkRatings.rating), 1)
+      SELECT Users.username AS walker_username, COUNT (WalkRatings.rating_id) AS total_ratings, ROUND(AVG(WalkRatings.rating), 1) AS average_rating,
     `);
   } catch (error) {
     // Error handling
