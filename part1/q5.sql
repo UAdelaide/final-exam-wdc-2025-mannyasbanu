@@ -14,8 +14,8 @@ VALUES ('Max', 'medium', (SELECT user_id FROM Users WHERE username = 'alice123')
 ('Griffith', 'large', (SELECT user_id FROM Users WHERE username = 'guts'));
 /*5 WALK REQUESTS*/
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
-VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Max'), 2025-06-10 08:00:00, 30, 'Parklands', 'open'),
-((SELECT dog_id FROM Dogs WHERE name = 'Bella'), 2025-06-10 09:30:00, 45, 'Beachside Ave', 'accepted'),
-((SELECT dog_id FROM Dogs WHERE name = 'Bogbog'), 2025-06-11 08:00:00, 450, 'The Evil Swamp', 'open'),
-((SELECT dog_id FROM Dogs WHERE name = 'Minh'), 2025-06-12 10:00:00, 60, 'Sofras AB', 'accepted'),
+VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
+((SELECT dog_id FROM Dogs WHERE name = 'Bella'), '2025-06-10 09:30:00, 45', 'Beachside Ave', 'accepted'),
+((SELECT dog_id FROM Dogs WHERE name = 'Bogbog'), '2025-06-11 08:00:00, 450', 'The Evil Swamp', 'open'),
+((SELECT dog_id FROM Dogs WHERE name = 'Minh'), '2025-06-12 10:00:00, 60, 'Sofras AB', 'accepted'),
 ((SELECT dog_id FROM Dogs WHERE name = 'Griffith'), 2025-06-9 08:00:00, 5, 'The Graveyard', 'completed');
