@@ -31,7 +31,7 @@ createApp({
       xhttp.send();
 
       // Get buttons and randomise
-      const buttons = [
+      buttons = [
         document.getElementById('about-button'),
         document.getElementById('nav-button'),
         document.getElementById('settings-button')
