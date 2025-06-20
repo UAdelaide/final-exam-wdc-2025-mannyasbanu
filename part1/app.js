@@ -12,12 +12,7 @@ var walkersRouter = require('./routes/walkers');
 
 var app = express();
 
-// Database pool
-const pool = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-})
+let db;
 
 (async () => {
   try {
