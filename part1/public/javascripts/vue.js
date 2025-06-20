@@ -3,6 +3,7 @@ const { createApp, ref, onMounted } = Vue;
 createApp({
   setup() {
     const dogImgUrl = ref('');
+    const buttons = [];
 
     onMounted(() => {
       const xhttp = new XMLHttpRequest();
