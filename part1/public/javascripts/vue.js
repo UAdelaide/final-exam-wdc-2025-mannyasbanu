@@ -46,6 +46,6 @@ createApp({
       console.log("attempted");
     });
 
-    return { dogImgUrl };
+    return { dogImgUrl, scrollToAbout };
   }
 }).mount('#app');
