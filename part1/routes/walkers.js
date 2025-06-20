@@ -9,7 +9,7 @@ router.get('/summary', async (req, res, next) => {
     // Query rows
     const [rows] = await db.query(`
       SELECT Users.username AS walker_username, (
-        SELECT COUNT(rating_id) FROM
+        SELECT COUNT(rating_id) FROM WalkRatings
       )
     `);
   } catch (error) {
