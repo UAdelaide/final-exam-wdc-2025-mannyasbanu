@@ -35,7 +35,7 @@ let db;
 
     // Create tables
     // Users
-    await db.execute(`
+    await db.query(`
       CREATE TABLE Users (
         user_id INT AUTO_INCREMENT PRIMARY KEY,
         username VARCHAR(50) UNIQUE NOT NULL,
