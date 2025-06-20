@@ -14,7 +14,7 @@ router.get('/summary', async (req, res, next) => {
         COUNT(CASE WHEN WalkRequests.status = 'completed' THEN 1 END) AS completed_walks
       FROM Users
       LEFT JOIN WalkRatings ON Users.user_id = WalkRatings.walker_id
-      LEFT JOIN WalkRequests ON Users.user_id =  WalkRequests.status = 'completed'
+      LEFT JOIN WalkRequests ON Users.user_id = WalkRatings.walker_id AND WalkRequests.status = 'completed'
     `);
   } catch (error) {
     // Error handling
