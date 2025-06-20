@@ -14,7 +14,7 @@ const vueinst = new Vue({
         console.log('failed to fetch dogImg');
       }
     };
-    xhttp.
+    xhttp.open('GET', '')
   },
   methods: {
   }
