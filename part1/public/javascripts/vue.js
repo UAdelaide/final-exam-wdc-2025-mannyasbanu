@@ -8,7 +8,7 @@ const vueinst = new Vue({
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = () => {
       if(xhttp.readyState == 4 && xhttp.status == 200){
-        dogimg =
+        dogImgUrl = 
       }
     }
 
