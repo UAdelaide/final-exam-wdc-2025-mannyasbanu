@@ -1,1 +1,1 @@
-const vue = Vue;
+const vue = new Vue();
