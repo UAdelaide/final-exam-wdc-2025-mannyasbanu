@@ -13,6 +13,7 @@ router.get('/summary', async (req, res, next) => {
         ROUND(AVG(WalkRatings.rating), 1) AS average_rating,
         COUNT(CASE WHEN WalkRequests.status = 'completed' THEN 1 END) AS completed_walks
       FROM Users
+      LEFT JOIN WalkRatings ON Users.user_id
     `);
   } catch (error) {
     // Error handling
