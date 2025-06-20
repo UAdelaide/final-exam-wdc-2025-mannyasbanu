@@ -19,16 +19,7 @@ createApp({
       xhttp.send();
     });
 
-    function randomisePos(){
-      buttons.forEach(button => {
-        if(!button) return;
-        const x = Math.random() * 1000;
-        const y = Math.random() * 1000;
-        button.style.position = 'fixed';
-        button.style.left = x;
-        button.style.top = y;
-      });
-    }
+    
 
     return { dogImgUrl };
   }
