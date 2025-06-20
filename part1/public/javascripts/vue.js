@@ -23,7 +23,8 @@ createApp({
       buttons.forEach(button => {
         if(!button) return;
         const x = Math.random() * 1000;
-        const y = Math.random
+        const y = Math.random() * 1000;
+        
       })
     }
 
