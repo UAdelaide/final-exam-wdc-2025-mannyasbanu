@@ -11,7 +11,7 @@ router.get('/summary', async (req, res, next) => {
       SELECT Users.username AS walker_username,
         COUNT(WalkRatings.rating_id) AS total_ratings,
         ROUND(AVG(WalkRatings.rating), 1) AS average_rating,
-        COUNT
+        COUNT(CASE WHEN Wal)
     `);
   } catch (error) {
     // Error handling
