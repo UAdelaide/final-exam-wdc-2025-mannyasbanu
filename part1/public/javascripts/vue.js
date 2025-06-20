@@ -23,7 +23,7 @@ createApp({
 
     function scrollToAbout() {
       const about = document.getElementById('about-section');
-      about.scrollIntoView(ease);
+      about.scrollIntoView({ behavior: 'smooth' });
     }
 
     onMounted(() => {
