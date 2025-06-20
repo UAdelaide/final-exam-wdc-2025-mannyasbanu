@@ -25,5 +25,5 @@ nav button {
 }
 
 nav button:hover {
-  display: none;
+  right: 10px;
 }
