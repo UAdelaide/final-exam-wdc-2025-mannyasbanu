@@ -7,7 +7,7 @@ const vueinst = new Vue({
     // Fetch dog image of the day
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = () => {
-      
+      if(xhttp.)
     }
 
   },
