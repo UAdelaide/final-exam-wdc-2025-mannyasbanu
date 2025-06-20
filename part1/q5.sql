@@ -13,4 +13,4 @@ VALUES ('Max', 'medium', (SELECT user_id FROM Users WHERE username = 'alice123')
 ('Minh', 'small', (SELECT user_id FROM Users WHERE username = 'guts')),
 ('Griffith', 'large', (SELECT user_id FROM Users WHERE username = 'guts'));
 /*5 WALK REQUESTS*/
-INSERT INTO WalkRequests (dog_id, )
+INSERT INTO WalkRequests (dog_id, requested_time, )
