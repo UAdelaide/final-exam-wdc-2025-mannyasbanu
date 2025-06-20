@@ -5,7 +5,12 @@ const db = require('../db');
 
 // GET request for /api/walkers/summary
 router.get('/summary', async (req, res, next) => {
-  try
+  try {
+
+  } catch (error) {
+    console.error(error);
+    res.status()
+  }
 });
 
 module.exports = router;
