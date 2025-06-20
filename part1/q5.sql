@@ -9,7 +9,7 @@ VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner'),
 INSERT INTO Dogs (name, size, owner_id)
 VALUES ('Max', 'medium', (SELECT user_id FROM Users WHERE username = 'alice123')),
 ('Bella', 'small', (SELECT user_id FROM Users WHERE username = 'carol123')),
-('Bogbog', 'medium', (SELECT user_id FROM Users WHERE username = 'carol123')),
+('Bogbog', 'large', (SELECT user_id FROM Users WHERE username = 'carol123')),
 ('Max', 'medium', (SELECT user_id FROM Users WHERE username = 'aish')),
 ('Max', 'medium', (SELECT user_id FROM Users WHERE username = 'aish'))
 /*5 WALK REQUESTS*/
