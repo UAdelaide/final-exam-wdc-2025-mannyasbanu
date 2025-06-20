@@ -20,5 +20,6 @@ nav button {
   font-size: large;
   font-weight: 1000;
   position: relative;
-  bottom: 20px;
+  bottom: 60px;
+  left: 60px;
 }
