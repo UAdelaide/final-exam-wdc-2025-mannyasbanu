@@ -22,7 +22,7 @@ createApp({
     function randomisePos(){
       buttons.forEach(button => {
         if(!button) return;
-        
+        const x = 
       })
     }
 
