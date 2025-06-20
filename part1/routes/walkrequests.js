@@ -4,6 +4,12 @@ const router = express.Router();
 const db = require('../db');
 
 // GET request for /api/walkrequests/open
-router.get('/open', async (req, res, next))
+router.get('/open', async (req, res, next) => {
+  try {
+    
+  } catch (error) {
+
+  }
+})
 
 module.exports = router;
