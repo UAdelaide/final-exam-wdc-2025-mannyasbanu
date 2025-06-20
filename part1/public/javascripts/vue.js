@@ -25,8 +25,9 @@ createApp({
         const x = Math.random() * 1000;
         const y = Math.random() * 1000;
         button.style.position = 'fixed';
-        button.style
-      })
+        button.style.left = x;
+        button.style.top = y;
+      });
     }
 
     return { dogImgUrl };
