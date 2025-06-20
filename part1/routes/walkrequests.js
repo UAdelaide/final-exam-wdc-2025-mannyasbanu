@@ -14,6 +14,7 @@ router.get('/open', async (req, res, next) => {
       INNER JOIN Users ON Dogs.owner_id = Users.user_id
       WHERE WalkRequests.status = 'open';
     `);
+    res.json(rows);
   } catch (error) {
     // Error handling
     console.error(error);
