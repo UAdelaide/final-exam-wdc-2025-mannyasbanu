@@ -61,7 +61,7 @@ let db;
         status ENUM('open', 'accepted', 'completed', 'cancelled') DEFAULT 'open',
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         FOREIGN KEY (dog_id) REFERENCES Dogs(dog_id))
-    `);
+    `); // WalkApplications
     await db.execute(`
       CREATE TABLE WalkApplications (
         application_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -72,7 +72,7 @@ let db;
         FOREIGN KEY (request_id) REFERENCES WalkRequests(request_id),
         FOREIGN KEY (walker_id) REFERENCES Users(user_id),
         CONSTRAINT unique_application UNIQUE (request_id, walker_id))
-    `);
+    `); // WalkRatings
     await db.execute(`
       CREATE TABLE WalkRatings (
         rating_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -87,7 +87,6 @@ let db;
         FOREIGN KEY (owner_id) REFERENCES Users(user_id),
         CONSTRAINT unique_rating_per_walk UNIQUE (request_id))
     `);
-
     // Insert data
     await db.execute(`
       INSERT INTO Users (username, email, password_hash, role)
