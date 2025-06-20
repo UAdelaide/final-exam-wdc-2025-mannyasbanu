@@ -3,7 +3,7 @@ const vueinst = new Vue({
   data: {
     dogimg: ''
   },
+  mounted
   methods: {
-    getDogIm
   }
 });
