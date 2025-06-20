@@ -7,7 +7,7 @@ router.get('/', async (req, res, next) => {
   try {
     var sql = `
     SELECT Dogs.name, Dogs.size, User.username FROM Dogs
-    INNERJOIN Dogs ON 
+    INNERJOIN User ON Dogs.
     `;
   } catch (error) {
 
