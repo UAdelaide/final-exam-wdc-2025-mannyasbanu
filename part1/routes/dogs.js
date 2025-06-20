@@ -5,7 +5,7 @@ const db = require('../db');
 
 router.get('/', async (req, res, next) => {
   try {
-    
+    var
   } catch (error) {
 
   }
