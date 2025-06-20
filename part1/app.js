@@ -89,6 +89,7 @@ let db;
         CONSTRAINT unique_rating_per_walk UNIQUE (request_id))
     `);
     // Insert data
+    // Users
     await db.execute(`
       INSERT INTO Users (username, email, password_hash, role)
       VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner'),
@@ -96,7 +97,7 @@ let db;
       ('carol123', 'carol@example.com', 'hashed789', 'owner'),
       ('manny', 'manny@example.com', 'hashed666', 'walker'),
       ('guts', 'guts@example.com', 'hashed444', 'owner')
-      `);
+      `); //Dogs
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
