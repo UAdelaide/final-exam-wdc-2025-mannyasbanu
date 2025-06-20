@@ -13,9 +13,10 @@ router.get('/summary', async (req, res, next) => {
       WHERE role = 'walker';
     `);
     // Query total ratings
-    walkers.forEach(walker => {
+    walkers.forEach(async (walker) => {
       const ratings = await db.query(`
-        `);
+        
+      `);
     });
   } catch (error) {
     // Error handling
