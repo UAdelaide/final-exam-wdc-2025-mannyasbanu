@@ -5,7 +5,7 @@ const db = require('../db');
 
 router.get('/', async (req, res, next) => {
   try {
-    var sql = 'SELECT * FROM'
+    var sql = 'SELECT name, size, own FROM Dogs'
   } catch (error) {
 
   }
