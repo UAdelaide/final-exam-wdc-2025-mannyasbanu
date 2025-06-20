@@ -6,10 +6,10 @@ const db = require('../db');
 // GET request for /api/walkers/summary
 router.get('/summary', async (req, res, next) => {
   try {
-
+    
   } catch (error) {
     console.error(error);
-    res.status()
+    res.status(400).json({ error: error.message });
   }
 });
 
