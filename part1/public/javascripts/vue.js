@@ -3,7 +3,6 @@ const { createApp, ref, onMounted } = Vue;
 createApp({
   setup() {
     const dogImgUrl = ref('');
-    const buttons = [];
 
     function randomisePos(){
       buttons.forEach(button => {
@@ -37,7 +36,7 @@ createApp({
         document.getElementById('settings-button')
       ];
       randomisePos(buttons);
-      window.addEventListener('scroll', ()=> randomisePos(buttons));
+      window.addEventListener('scroll', () => randomisePos(buttons));
     });
 
     return { dogImgUrl };
