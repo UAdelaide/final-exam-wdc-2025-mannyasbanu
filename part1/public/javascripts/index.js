@@ -1,1 +1,1 @@
-const vue = new VueInst
+const vue = Vue;
