@@ -9,6 +9,7 @@ router.get('/', async (req, res, next) => {
     SELECT Dogs.name, Dogs.size, Users.username FROM Dogs
     INNER JOIN Users ON Dogs.owner_id = Users.user_id;
     `;
+    await db.query()
   } catch (error) {
 
   }
