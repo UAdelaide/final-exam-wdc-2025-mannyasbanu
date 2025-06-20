@@ -11,5 +11,5 @@ a {
 nav{
   background-color: greenyellow;
   font-size: large;
-  display: ;
+  position: fixed;
 }
