@@ -4,6 +4,8 @@ const router = express.Router();
 const db = require('../db');
 
 // GET request for /api/walkers/summary
-routers.get('/summary', async ())
+routers.get('/summary', async (req, res, next) => {
+  
+});
 
 module.exports = router;
