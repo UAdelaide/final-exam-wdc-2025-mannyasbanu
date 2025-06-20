@@ -14,7 +14,7 @@ const vueinst = new Vue({
         console.log('failed to fetch dogImg');
       }
     };
-    xhttp.open('GET', '')
+    xhttp.open('GET', 'https://dog.ceo/api/breeds/image/random', true)
   },
   methods: {
   }
