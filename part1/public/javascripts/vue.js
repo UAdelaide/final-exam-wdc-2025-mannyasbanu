@@ -1,3 +1,6 @@
 const vue = new Vue({
-  el: "#app"
+  el: "#app",
+  data: {
+    
+  }
 });
