@@ -16,6 +16,7 @@ router.get('/summary', async (req, res, next) => {
     walkers.forEach(async (walker) => {
       const ratings = await db.query(`
         SELECT COUNT(WalkRatings.rating_id)
+        FROM 
       `);
     });
   } catch (error) {
