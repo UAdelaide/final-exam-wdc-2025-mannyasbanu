@@ -13,6 +13,9 @@ router.get('/summary', async (req, res, next) => {
       WHERE role = 'walker';
     `);
     // Query total ratings
+    walkers.forEach(walker => {
+
+    })
   } catch (error) {
     // Error handling
     console.error(error);
