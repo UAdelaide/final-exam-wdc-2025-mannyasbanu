@@ -6,10 +6,7 @@ const db = require('../db');
 router.get('/', async (req, res, next) => {
   try {
     const [rows] = await db.query('SELECT Dogs.name, Dogs.size, Users.username FROM Dogs INNER JOIN Users ON Dogs.owner_id = Users.user_id;');
-    var json = {
-      name: 'vawvw',
-      goop: 'awd'
-    };
+    
     rows.forEach(row => {
     });
   } catch (error) {
