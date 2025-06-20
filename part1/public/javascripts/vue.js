@@ -15,7 +15,8 @@ createApp({
         button.style.position = 'fixed';
         button.style.left = xpos + 'px';
         button.style.top = ypos + 'px';
-        button.style
+        button.style.height = xsize + 'px';
+        button.style.height = ysize + 'px';
       });
     }
 
