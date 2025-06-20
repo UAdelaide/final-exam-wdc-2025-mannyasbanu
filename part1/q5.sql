@@ -5,4 +5,6 @@ VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner'),
 ('carol123', 'carol@example.com', 'hashed789', 'owner'),
 ('manny', 'manny@example.com', 'hashed666', 'walker'),
 ('aish', 'aish@example.com', 'hashed444', 'owner');
-/*5 USERS*/
+/*5 DOGS*/
+INSERT INTO Dogs (n)
+/*5 WALK REQUESTS*/
