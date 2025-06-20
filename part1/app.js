@@ -89,7 +89,9 @@ let db;
     `);
 
     // Insert data
-    await db.execute('SELECT COUNT(*) AS count FROM books');
+    await db.execute('
+
+      ');
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
