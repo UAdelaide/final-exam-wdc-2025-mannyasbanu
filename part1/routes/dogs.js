@@ -5,11 +5,7 @@ const db = require('../db');
 
 router.get('/', async (req, res, next) => {
   try {
-    var sql = `
-    SELECT Dogs.name, Dogs.size, Users.username FROM Dogs
-    INNER JOIN Users ON Dogs.owner_id = Users.user_id;
-    `;
-    await db.query()
+    await db.query('SELECT Dogs.name, Dogs.size, Users.username FROM Dogs INNER JOIN Users ON Dogs.owner_id = Users.user_id;');
   } catch (error) {
 
   }
