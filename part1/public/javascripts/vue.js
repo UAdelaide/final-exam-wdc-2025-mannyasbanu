@@ -1,3 +1,9 @@
 new Vue({
-  el: #app
+  el: '#app',
+  data: {
+    
+  },
+  methods: {
+
+  }
 })
