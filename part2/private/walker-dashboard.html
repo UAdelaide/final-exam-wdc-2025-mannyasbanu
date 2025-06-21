@@ -9,7 +9,7 @@
 </head>
 <body class="bg-light">
   <div id="app" class="container py-4">
-    
+
     <!-- Dashboard heading and logout button -->
     <div class="d-flex justify-content-between align-items-center mb-4">
       <h1 class="mb-4 text-success">Walker Dashboard</h1>
@@ -51,7 +51,7 @@
         const user = 3;
 
         // Logout function
-        async function logout() {
+        const logout = async () => {
           try {
             // Send logout post request
             const res = await fetch('/api/users/logout', {
