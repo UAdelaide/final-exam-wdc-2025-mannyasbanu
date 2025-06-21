@@ -34,14 +34,10 @@ app.get('/', (req, res) => {
 });
 
 // Authentication middleware
-
-// Check if logged in
 function loginCheck(req, res, next){
   if(req.session && req.session.user) return next();
   res.redirect('/');
 }
-
-// Check for role match
 function roleCheck(role){
   return function(req, res, next){
     if(!req.session.user){
