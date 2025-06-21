@@ -179,7 +179,7 @@ async function login(username, password){
         const res = await fetch('/api/users/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body
+            body: JSON.stringify
         })
     }
 
