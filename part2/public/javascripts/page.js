@@ -176,8 +176,8 @@ function downvote(index) {
 function login(username, password){
 
     let user = {
-        user: username,
-        pass: password
+        username: username,
+        password: password
     };
 
     console.log("made it here2");
