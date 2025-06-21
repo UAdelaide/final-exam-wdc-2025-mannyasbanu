@@ -58,9 +58,9 @@ router.post('/login', async (req, res) => {
 
     // Redirect according to role
     if(user.role == 'owner'){
-      res.redirect('/owner')
+      res.redirect('/owner');
     } else if (user.role == 'walker'){
-
+      res.redirect('/walker');
     } else {
       res.status(403).send('user role is unknown');
     }
