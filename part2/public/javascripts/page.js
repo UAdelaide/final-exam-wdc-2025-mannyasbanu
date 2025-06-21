@@ -1,3 +1,5 @@
+const { response } = require("../../app");
+
 var posts = [];
 var search = null;
 
@@ -185,7 +187,10 @@ async function login(username, password){
         });
         // Parse response
         const data = await res.json();
-        //
+        // Validate response
+        if(!response.ok){
+            throw
+        }
     }
 
     // Create AJAX Request
