@@ -69,7 +69,19 @@
           }
         }
         // Fetch random dog image
-        async function getDogImg
+        async function getDogImg(){
+          try {
+            // Send get request to api
+            const res = await fetch('/api/dogs', {
+              method: 'GET',
+              credentials: 'include'
+            });
+            // Parse and store in dog list
+            dogs.value = await res.json();
+          } catch (error) {
+            console.error('Failed to fetch dogs: ', error);
+          }
+        }
         // Fetch dogs on start
         onMounted(() => {
           loadDogs();
