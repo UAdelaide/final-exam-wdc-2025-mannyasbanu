@@ -7,6 +7,11 @@ const session = require('express-session');
 
 const app = express();
 
+// Session setup
+app.use(session)({
+  
+})
+
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
