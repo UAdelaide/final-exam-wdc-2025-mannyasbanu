@@ -74,7 +74,8 @@
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify({
                     username: loginForm.value.username,
-                    password }),
+                    password: loginForm.value.password
+                  }),
                   credentials: 'include'
               });
               // Parse response
