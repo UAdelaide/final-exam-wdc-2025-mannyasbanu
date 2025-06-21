@@ -67,8 +67,8 @@
             // Fetch and add image to each dog
             for (const dog of dogData){
               const resImg = await fetch('https://dog.ceo/api/breeds/image/random');
-              const dogImg = await
-              dog.imageUrl
+              const dogImg = await resImg.json();
+              dog.imageUrl = dogImg.message;
             }
 
             dogs.value.forEach(dog => {
