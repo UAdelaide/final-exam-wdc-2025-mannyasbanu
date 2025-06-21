@@ -183,8 +183,9 @@ async function login(username, password){
             body: JSON.stringify({ username, password }),
             credentials: 'include'
         });
+        // Parse response
+        const data = await res.json();
         //
-        const data = 
     }
 
     // Create AJAX Request
