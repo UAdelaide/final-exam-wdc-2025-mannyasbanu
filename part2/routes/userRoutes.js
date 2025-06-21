@@ -58,11 +58,11 @@ router.post('/login', async (req, res) => {
 
     // Redirect according to role
     if(user.role == 'owner'){
-
+      res.redirect('/owner')
     } else if (user.role == 'walker'){
 
     } else {
-      res.status(403).send('user role is unknown')
+      res.status(403).send('user role is unknown');
     }
 
     res.json({ message: 'Login successful', user: rows[0] });
