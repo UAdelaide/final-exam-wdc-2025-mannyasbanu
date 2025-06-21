@@ -76,7 +76,8 @@
               method: 'GET'
             });
             // Parse and return
-            dogs.value = await res.json();
+            const img = await res.json();
+            return img.message
           } catch (error) {
             console.error('Failed to fetch dogs: ', error);
           }
