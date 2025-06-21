@@ -37,6 +37,7 @@ router.get('/me', (req, res) => {
 
 // POST login
 router.post('/login', async (req, res) => {
+  console.log('made it here');
   const { username, password } = req.body;
 
   try {
