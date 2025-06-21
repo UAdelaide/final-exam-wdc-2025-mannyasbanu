@@ -23,16 +23,6 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 // Authentication middleware
 
-
-// Routes
-const walkRoutes = require('./routes/walkRoutes');
-const userRoutes = require('./routes/userRoutes');
-
-app.use('/api/walks', walkRoutes);
-app.use('/api/users', userRoutes);
-
-// Middleware for protected dashboards
-
 // Check if logged in
 function loginCheck(req, res, next){
   if(req.session && req.session.user) return next();
@@ -47,9 +37,19 @@ function roleCheck(role){
     }
     if(req.session.user.role === role) return next();
     res.status(403).send('Access denied');
-    res.status(403).send('Access denied');
   };
 }
+
+// Routes
+const walkRoutes = require('./routes/walkRoutes');
+const userRoutes = require('./routes/userRoutes');
+
+app.use('/api/walks', walkRoutes);
+app.use('/api/users', userRoutes);
+
+// Middleware for protected dashboards
+
+
 
 // Serve owner dashboard
 app.get('/owner', loginCheck, roleCheck('owner'), (req, res) => {
