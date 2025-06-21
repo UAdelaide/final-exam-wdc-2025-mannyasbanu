@@ -9,8 +9,8 @@ const app = express();
 
 // Session setup
 app.use(session({
-  secret:
-  resave:
+  secret: ''
+  resave: false,
   saveUninitialized: true,
   cookie: { maxAge: 1000000 }
 }))
