@@ -22,7 +22,9 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
 // Middleware functions
+function loginCheck()
 
+function roleCheck()
 
 // Serve owner dashboard
 
