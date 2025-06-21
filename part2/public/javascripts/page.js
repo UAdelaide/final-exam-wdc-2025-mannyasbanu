@@ -191,6 +191,8 @@ async function login(username, password){
         if(!response.ok){
             throw new Error('Login failed');
         }
+        // Redirect according to role
+        
     }
 
     // Create AJAX Request
