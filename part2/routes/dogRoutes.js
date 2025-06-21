@@ -4,9 +4,12 @@ const db = require('../models/db');
 
 router.get('/', loginCheck, async(req, res) => {
   try {
-    const [dogs] = await db.query(``)
-  } catch (error) {
+    const [dogs] = await db.query(`
 
+    `);
+    res.json(dogs);
+  } catch (error) {
+    res.status(500).json
   }
 })
 
