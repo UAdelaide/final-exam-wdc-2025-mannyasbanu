@@ -96,7 +96,7 @@
         async function loadDogs() {
           try {
             // Send dogs get request
-            const res = await fetch('/api/dogs', {
+            const res = await fetch('/api/dogs/mine', {
               method: 'GET',
               credentials: 'include'
             });
