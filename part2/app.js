@@ -19,7 +19,6 @@ app.use(session({
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
 
 // Default root handler
 app.get('/', (req, res) => {
@@ -33,6 +32,8 @@ app.get('/', (req, res) => {
   } // Otherwise redirect to login page
   res.sendFile(path.join(__dirname, '/public/index.html'));
 });
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Authentication middleware
 function loginCheck(req, res, next){
