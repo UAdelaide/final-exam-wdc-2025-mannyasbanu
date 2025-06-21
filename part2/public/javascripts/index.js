@@ -16,7 +16,7 @@ async function login(username, password){
             throw new Error(data.error || 'Login failed');
         }
         // Reload page
-        
+        window.location.href = '/';
     } catch (error){
         console.error('Login error: ', error);
         alert('Login failed');
