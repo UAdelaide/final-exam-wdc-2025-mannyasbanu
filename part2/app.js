@@ -36,7 +36,9 @@ function roleCheck(role){
 }
 
 // Serve owner dashboard
-app.get('/owner', loginCheck(),)
+app.get('/owner', loginCheck(), roleCheck('owner'), (req, res) => {
+  
+})
 
 // Serve walker dashboard
 app.get('/walker')
