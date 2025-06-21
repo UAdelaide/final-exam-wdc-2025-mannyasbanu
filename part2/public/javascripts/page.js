@@ -174,10 +174,10 @@ function downvote(index) {
 }
 
 async function login(username, password){
-    
-
-
     console.log("Sending login request");
+    try{
+        const res = await fetch()
+    }
 
     // Create AJAX Request
     var xmlhttp = new XMLHttpRequest();
