@@ -193,11 +193,11 @@ async function login(username, password){
         }
         // Redirect according to role
         if(data.role === 'owner'){
-
+            window.location.href = 
         }else if(data.role === 'walker'){
 
         }else {
-            throw new Error()
+            throw new Error('Uknown user role');
         }
     }
 
