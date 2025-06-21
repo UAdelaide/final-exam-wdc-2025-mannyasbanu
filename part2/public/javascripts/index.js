@@ -12,7 +12,7 @@ async function login(username, password){
         // Parse response
         const data = await res.json();
         // Validate response
-        if(!response.ok){
+        if(!res.ok){
             throw new Error(data.error || 'Login failed');
         }
         // Redirect according to role
