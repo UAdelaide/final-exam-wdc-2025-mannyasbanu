@@ -195,3 +195,7 @@ th {
 tr:nth-child(even){
     background-color: rgb(234, 234, 234);
 }
+
+td:last-child {
+    padding-right: 5px;
+}
