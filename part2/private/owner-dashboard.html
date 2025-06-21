@@ -95,7 +95,9 @@
             });
             // Validate response
             if(res.ok) {
-              window.location
+              window.location.href = '/';
+            } else {
+              throw new Error('Logout failed');
             }
           } catch (error) {
 
