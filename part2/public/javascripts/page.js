@@ -173,7 +173,6 @@ function downvote(index) {
     updatePosts();
 }
 
-
 function login(username, password){
 
     let user = {
@@ -211,3 +210,14 @@ function logout(){
     xmlhttp.send();
 
 }
+
+// LOGIN EVENT LISTENER
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    // Ignore default submit method
+    event.preventDefault();
+    const form = new FormData(event.target);
+    const username = form.get('username');
+    const password = form.get('password');
+    // Call login function
+    login(username, password);
+});
