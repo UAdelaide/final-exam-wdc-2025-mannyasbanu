@@ -43,12 +43,12 @@ function roleCheck(role){
 app.get('/', (req, res) => {
   if(req.session?.user) {
     if(req.session.user.role === 'owner'){
-
-    } else if()
+      return res.redirect('/owner');
+    } else if(req.session.user.role === 'walker'){
+      return res.redirect('/walker');
+    }
     // Redirect to role dashboards
-    return res.redirect('/owner');
     // Otherwise login page
-    return res.redirect('/walker');
   }
 })
 app.use(express.static(path.join(__dirname, '/public')));
