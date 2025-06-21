@@ -60,6 +60,8 @@
             });
             // Get user details
             user = await res.json();
+            // Return user id
+            return user.user_id;
           } catch (error) {
 
           }
