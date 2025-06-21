@@ -192,7 +192,13 @@ async function login(username, password){
             throw new Error(data.error || 'Login failed');
         }
         // Redirect according to role
-        if(data.role === 'owner')
+        if(data.role === 'owner'){
+
+        }else if(data.role === 'walker'){
+
+        }else {
+            throw new Error()
+        }
     }
 
     // Create AJAX Request
