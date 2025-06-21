@@ -180,6 +180,10 @@ table {
     background-color: white;
 }
 
+th, tr {
+    padding: ;
+}
+
 th {
     font-weight: bold;
 }
