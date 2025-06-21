@@ -87,7 +87,14 @@
 
         // Show dog names function
         const dogs = ref([]); // Store list of dogs
-        async function loadDogs()
+        async function loadDogs() {
+          try {
+            // Send dogs get request
+            
+          } catch (error) {
+
+          }
+        }
 
         // Logout function
         const logout = async () => {
