@@ -39,6 +39,7 @@ function roleCheck(role){
   };
 }
 
+// Redirect user according to role
 app.use(express.static(path.join(__dirname, '/public')));
 
 
