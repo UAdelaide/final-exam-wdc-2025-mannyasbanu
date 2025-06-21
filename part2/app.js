@@ -46,7 +46,7 @@ function roleCheck(role){
 
 // Serve owner dashboard
 app.get('/owner', loginCheck(), roleCheck('owner'), (req, res) => {
-  res.sendFile(path.join(__dirname, '/private', 'owner-dashboard.html'));
+  res.sendFile(path.join(__dirname, 'private/owner-dashboard.html'));
 });
 
 // Serve walker dashboard
