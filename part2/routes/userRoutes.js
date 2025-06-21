@@ -51,9 +51,9 @@ router.post('/login', async (req, res) => {
 
     // Store session information
     req.session.user = {
-      user_id: user[0],
+      user_id: user.user_id,
       username: username,
-      role: rows[2]
+      role: user.role
     };
 
     // Redirect according to role
