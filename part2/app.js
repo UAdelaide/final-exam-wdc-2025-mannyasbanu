@@ -33,6 +33,8 @@ app.get('/', (req, res) => {
     // Destroy session if user role uknown
     req.session.destroy();
   }
+  // Otherwise redirect to login page
+  res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
 // Authentication middleware
