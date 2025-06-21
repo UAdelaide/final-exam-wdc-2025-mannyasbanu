@@ -8,12 +8,12 @@ const session = require('express-session');
 const app = express();
 
 // Session setup
-app.use(session)({
+app.use(session({
   secret:
   resave:
   saveUninitialized: true,
   cookie: { maxAge: 1000000 }
-})
+}))
 
 // Middleware
 app.use(express.json());
