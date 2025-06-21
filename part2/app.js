@@ -24,6 +24,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 // Middleware functions
 function loginCheck(req, res, next){
   if(req.session.user) return next();
+  res.redirect('')
 }
 
 function roleCheck(role){
