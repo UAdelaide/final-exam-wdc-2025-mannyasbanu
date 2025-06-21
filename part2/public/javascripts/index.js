@@ -26,7 +26,7 @@ async function login(username, password){
         alert('Welcome ', data.username);
     } catch (error){
         console.error('Login error: ', error);
-        alert(error.message || 'Login failed');
+        alert('Login failed');
     }
 }
 
