@@ -180,6 +180,10 @@ table {
     background-color: white;
 }
 
+td {
+    border-bottom: 1px solid grey;
+}
+
 th, tr {
     padding: 10px;
 }
