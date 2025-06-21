@@ -64,7 +64,27 @@
         const loginError = ref(null);
         // Login function
         async function login(){
-          
+          console.log("Sending login request");
+          try{
+              // Post login request
+              const res = await fetch('/api/users/login', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ username, password }),
+                  credentials: 'include'
+              });
+              // Parse response
+              const data = await res.json();
+              // Validate response
+              if(!res.ok){
+                  throw new Error(data.error || 'Login failed');
+              }
+              // Reload page
+              window.location.href = '/';
+          } catch (error){
+              console.error('Login error: ', error);
+              alert('Login failed');
+          }
         }
         // Store dogs
         const dogs = ref([]);
