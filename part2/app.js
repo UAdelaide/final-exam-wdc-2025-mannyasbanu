@@ -20,6 +20,9 @@ app.use(session({
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Auth middleware
+{ loginCheck,  }
+
 // Default root handler
 app.get('/', (req, res) => {
   // Redirect to role dashboards
@@ -37,12 +40,11 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
-
-
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 const dogRoutes = require('./routes/dogRoutes');
+const { loginCheck } = require('./auth');
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/dogs', dogRoutes);
