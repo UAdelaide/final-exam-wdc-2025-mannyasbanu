@@ -29,9 +29,9 @@ app.get('/', (req, res) => {
     }
     if(req.session.user.role === 'walker'){
       return res.redirect('/walker');
-    } else {
-      req.session.destroy();
     }
+    // Destroy session if user role uknown
+    req.session.destroy();
   }
 });
 
