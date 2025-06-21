@@ -175,7 +175,9 @@ function downvote(index) {
 
 
 // LOGIN EVENT LISTENER
-document.getElementById('login-form').addEventListener('submit')
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    
+})
 
 function login(username, password){
 
