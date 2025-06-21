@@ -173,7 +173,7 @@ function downvote(index) {
     updatePosts();
 }
 
-function login(username, password){
+async function login(username, password){
     fetch('/api/users/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -182,7 +182,7 @@ function login(username, password){
     })
     .then(response => response.json())
     .then(data => {
-        
+
     })
 
     console.log("Sending login request");
