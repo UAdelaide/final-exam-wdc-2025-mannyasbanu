@@ -58,7 +58,7 @@ const userRoutes = require('./routes/userRoutes');
 const dogRoutes = require('./routes/dogRoutes');
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
-app.use('/api/users', userRoutes);
+app.use('/api/dogs', dogRoutes);
 
 // Protected routes
 app.get('/owner', loginCheck, roleCheck('owner'), (req, res) => {
