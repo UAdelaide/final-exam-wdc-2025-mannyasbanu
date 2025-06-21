@@ -35,9 +35,6 @@ app.get('/', (req, res) => {
   }
 });
 
- // Otherwise redirect to login page
-  res.sendFile(path.join(__dirname, '/public/index.html'));
-
 // Authentication middleware
 function loginCheck(req, res, next){
   if(req.session && req.session.user) return next();
