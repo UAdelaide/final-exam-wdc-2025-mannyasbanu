@@ -12,7 +12,7 @@ app.use(session)({
   secret:
   resave:
   saveUninitialized: true,
-  cookie: { maxAge: 10}
+  cookie: { maxAge: 1}
 })
 
 // Middleware
