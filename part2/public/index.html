@@ -70,10 +70,8 @@
               const dogImg = await resImg.json();
               dog.imageUrl = dogImg.message;
             }
-
-            dogs.value.forEach(dog => {
-              dog.imageUrl = getDogImg();
-            })
+            // Add to dog list
+            dogs.value = dogData;
           } catch (error) {
             console.error('Failed to fetch dogs: ', error);
           }
