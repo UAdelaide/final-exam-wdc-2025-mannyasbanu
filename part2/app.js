@@ -55,7 +55,8 @@ app.get('/owner', loginCheck, roleCheck('owner'), (req, res) => {
 });
 
 // Serve walker dashboard
-app.get('/walker', loginCheck, roleCheck('walker'), (req, res) => {
+app.get('/walker', authCheck, (req, res) => {
+  if (re)
   res.sendFile(path.join(__dirname, 'private/walker-dashboard.html'));
 });
 
