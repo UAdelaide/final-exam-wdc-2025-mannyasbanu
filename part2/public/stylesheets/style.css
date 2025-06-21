@@ -179,6 +179,9 @@ table {
     margin-top: 20px;
 }
 
+th {
+    font-weight: bold;
+}
 
 tr:nth-child(even){
     background-color: lightgrey;
