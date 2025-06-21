@@ -5,7 +5,7 @@ const db = require('../models/db');
 router.get('/', loginCheck, async(req, res) => {
   try {
     const [dogs] = await db.query(`
-      SELECT 
+      SELECT dog_id, name FROM Dogs
     `);
     res.json(dogs);
   } catch (error) {
