@@ -29,6 +29,7 @@ app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
 // Middleware for protected dashboards
+
 // Check if logged in
 function loginCheck(req, res, next){
   if(req.session.user) return next();
