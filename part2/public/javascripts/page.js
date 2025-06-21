@@ -180,7 +180,7 @@ function downvote(index) {
 function login(){
 
     let user = {
-        user: document.getElementById('username').value,
+        user: username,
         pass: document.getElementById('password').value
     };
 
