@@ -180,7 +180,7 @@ function login(username, password){
         pass: password
     };
 
-    console
+    console.log("made it here");
 
     // Create AJAX Request
     var xmlhttp = new XMLHttpRequest();
