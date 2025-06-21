@@ -189,7 +189,7 @@ async function login(username, password){
         const data = await res.json();
         // Validate response
         if(!response.ok){
-            throw
+            throw new Error()
         }
     }
 
