@@ -199,3 +199,8 @@ tr:nth-child(even){
 td:last-child {
     padding-right: 5px;
 }
+
+/* APP */
+#app {
+    max-width: 1000px;
+}
