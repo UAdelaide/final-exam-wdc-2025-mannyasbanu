@@ -36,10 +36,10 @@ function roleCheck(role){
 }
 
 // Serve owner dashboard
-app.get('/owner')
+app.get('/owner', loginCheck(),)
 
 // Serve walker dashboard
-app.get()
+app.get('/walker')
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
