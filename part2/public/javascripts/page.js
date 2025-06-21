@@ -181,7 +181,7 @@ function login(username, password){
     };
 
     console.log('we made it here', user);
-    break;
+    /*
 
     // Create AJAX Request
     var xmlhttp = new XMLHttpRequest();
@@ -200,7 +200,6 @@ function login(username, password){
     xmlhttp.open("POST", "/users/login", true);
     xmlhttp.setRequestHeader("Content-type", "application/json");
     xmlhttp.send(JSON.stringify(user));
-
 }
 
 function logout(){
