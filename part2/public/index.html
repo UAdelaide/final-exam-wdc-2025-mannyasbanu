@@ -64,8 +64,8 @@
             });
             // Parse and store in dog list
             const dogData = await res.json();
-            // Get random dog image and map to each dog
-            dogs.value = await Promise.all(dogData.map())
+            // Add image to each dog element
+            for (let i = 0)
           } catch (error) {
             console.error('Failed to fetch dogs: ', error);
           }
