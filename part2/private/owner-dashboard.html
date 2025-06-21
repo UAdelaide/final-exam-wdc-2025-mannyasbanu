@@ -95,6 +95,7 @@
               credentials: 'include'
             });
             // Store in dog list
+            dogs.value = await res.json();
           } catch (error) {
             console.error('Fetch error: ', error);
             alert('Failed to fetch dogs');
