@@ -19,6 +19,7 @@ app.use(session({
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Default root handler
 app.get('/', (req, res) => {
@@ -30,7 +31,7 @@ app.get('/', (req, res) => {
       return res.redirect('/walker');
     }
   } // Otherwise redirect to login page
-  res.sendFile(path.join(__dirname, '/public'));
+  res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
 // Authentication middleware
