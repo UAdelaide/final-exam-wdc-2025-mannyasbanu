@@ -62,7 +62,7 @@ router.post('/login', async (req, res) => {
     } else if (user.role == 'walker'){
 
     } else {
-      res.status()
+      res.status(403).send('user role is unknown')
     }
 
     res.json({ message: 'Login successful', user: rows[0] });
