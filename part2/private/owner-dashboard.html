@@ -88,10 +88,12 @@
         // Logout function
         async function logout() {
           try {
+            // Send logout post request
             const res = await fetch('/api/users/logout', {
               method: 'POST',
               credentials: 'include'
-            })
+            });
+
           } catch (error) {
 
           }
