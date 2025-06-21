@@ -176,13 +176,15 @@ function downvote(index) {
 async function login(username, password){
     console.log("Sending login request");
     try{
+        // Post login request
         const res = await fetch('/api/users/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, password }),
             credentials: 'include'
         });
-        
+        //
+        const data = 
     }
 
     // Create AJAX Request
