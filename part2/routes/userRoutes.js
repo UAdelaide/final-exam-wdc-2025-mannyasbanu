@@ -53,7 +53,7 @@ router.post('/login', async (req, res) => {
     // Store cookie
     const age = 100000;
     const expiry = Date.now() + age;
-    res.cookie('')
+    res.cookie('name', username, { age });
 
     // Store session information
     req.session.user = {
