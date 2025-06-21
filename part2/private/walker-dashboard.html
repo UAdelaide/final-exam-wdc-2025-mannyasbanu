@@ -56,8 +56,9 @@
             // Send get request for user details
             const res = await fetch('/api/users/me', {
               method: 'GET',
-              
-            })
+              credentials: 'include'
+            });
+            // 
           } catch (error) {
 
           }
