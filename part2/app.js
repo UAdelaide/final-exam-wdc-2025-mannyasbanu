@@ -37,7 +37,7 @@ function loginCheck(req, res, next){
 function roleCheck(role){
   return function(req, res, next){
     if(!req.session){
-      return 
+      return res.status(401).redirect('/');
     }
     if(req.session.user.role == role) return next();
     res.status(403).send('Access denied');
