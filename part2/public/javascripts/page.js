@@ -199,6 +199,8 @@ async function login(username, password){
         }else {
             throw new Error('Unknown user role');
         }
+    } catch (error){
+        console.error('')
     }
 
     // Create AJAX Request
