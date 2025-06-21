@@ -64,6 +64,7 @@
             }
             // Get user details
             const userData = await res.json();
+            user.value = userData;
             // Return user id
             return user.user_id;
           } catch (error) {
