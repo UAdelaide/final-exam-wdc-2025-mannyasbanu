@@ -29,6 +29,7 @@ app.get('/', (req, res) => {
     } else if(req.session.user.role === 'walker'){
       return res.redirect('/walker');
     } else {
+      req.session
     }
   } // Otherwise redirect to login page
   res.sendFile(path.join(__dirname, '/public/index.html'));
