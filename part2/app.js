@@ -25,7 +25,30 @@ app.use(express.static(path.join(__dirname, '/public')));
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 
+// Middleware for protected dashboards
+// Check if logged in
+function loginCheck(req, res, next){
+  if(req.session.user) return next();
+  res.redirect('/');
+}
 
+// Check for role match
+function roleCheck(role){
+  return function(req, res, next){
+    if(req.session.user.role == role) return next();
+    res.status(403).send('Access denied');
+  };
+}
+
+// Serve owner dashboard
+app.get('/owner', loginCheck(), roleCheck('owner'), (req, res) => {
+  res.sendFile(path.join(__dirname, 'private', 'owner-dashboard.html'));
+});
+
+// Serve walker dashboard
+app.get('/walker'), loginCheck(), roleCheck('walker'), (req, res) => {
+  res.sendFile(path.join(__dirname, 'private', 'walker-dashboard.html'));
+};
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
