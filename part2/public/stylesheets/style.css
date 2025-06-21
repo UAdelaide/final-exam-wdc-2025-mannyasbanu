@@ -181,7 +181,7 @@ table {
 }
 
 td {
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid lightgrey;
 }
 
 th, tr {
@@ -193,5 +193,5 @@ th {
 }
 
 tr:nth-child(even){
-    background-color: lightgrey;
+    background-color: rgb(234, 234, 234);
 }
