@@ -88,7 +88,7 @@
               window.location.href = '/';
           } catch (error){
               console.error('Login error: ', error);
-              alert('Login failed');
+              loginError.value = error.message;
           }
         }
         // Store dogs
