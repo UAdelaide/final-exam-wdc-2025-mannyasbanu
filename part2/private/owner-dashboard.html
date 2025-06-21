@@ -87,7 +87,11 @@
 
         // Logout function
         async function logout() {
-          
+          try {
+            const res = await fetch('/api/')
+          } catch (error) {
+
+          }
         }
 
         async function loadWalks() {
