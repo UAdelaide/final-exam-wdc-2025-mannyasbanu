@@ -56,7 +56,7 @@ app.get('/owner', loginCheck, roleCheck('owner'), (req, res) => {
 
 // Serve walker dashboard
 app.get('/walker', authCheck, (req, res) => {
-  if (re)
+  if (req.session.user.role !== 'walker') return res.redirect('/');
   res.sendFile(path.join(__dirname, 'private/walker-dashboard.html'));
 });
 
