@@ -33,8 +33,6 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
-app.use(express.static(path.join(__dirname, 'public')));
-
 // Authentication middleware
 function loginCheck(req, res, next){
   if(req.session && req.session.user) return next();
@@ -63,6 +61,8 @@ app.get('/owner', loginCheck, roleCheck('owner'), (req, res) => {
 app.get('/walker', loginCheck, roleCheck('walker'), (req, res) => {
   res.sendFile(path.join(__dirname, 'private/walker-dashboard.html'));
 });
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Export the app instead of listening here
 module.exports = app;
