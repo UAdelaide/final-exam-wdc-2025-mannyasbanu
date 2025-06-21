@@ -3,7 +3,8 @@ const router = express.Router();
 const db = require('../models/db');
 const { loginCheck } = require('../auth');
 
-router.get('/', loginCheck, async(req, res) => {
+// GET request for owner dogs
+router.get('/mine', loginCheck, async(req, res) => {
   try {
     // Query database
     const [dogs] = await db.query(`
