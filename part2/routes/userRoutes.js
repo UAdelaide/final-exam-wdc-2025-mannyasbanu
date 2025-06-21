@@ -61,7 +61,7 @@ router.post('/login', async (req, res) => {
     res.json({ role: user.role });
 
   } catch (error) {
-    res.status(500).send();
+    res.status(500).send('Server error');
   }
 });
 
