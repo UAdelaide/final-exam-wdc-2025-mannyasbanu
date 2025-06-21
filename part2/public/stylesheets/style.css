@@ -159,5 +159,6 @@ section {
 .login-container input {
     display: inline-block;
     width: 100%;
-    size: 50px;
+    size: 100px;
+    background-color: red;
 }
