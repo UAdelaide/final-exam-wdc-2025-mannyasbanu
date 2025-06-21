@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
     } else if(req.session.user.role === 'walker'){
       return res.redirect('/walker');
     } else {
-      req.session
+      req.session.destroy();
     }
   } // Otherwise redirect to login page
   res.sendFile(path.join(__dirname, '/public/index.html'));
