@@ -63,7 +63,7 @@
               throw new Error('Failed to fetch user data')
             }
             // Get user details
-            user = await res.json();
+            const userData = await res.json();
             // Return user id
             return user.user_id;
           } catch (error) {
