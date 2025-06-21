@@ -10,8 +10,10 @@ router.get('/', loginCheck, async(req, res) => {
       FROM Dogs
       WHERE owner_id = ?
     `, [req.session.user.user_id]);
+    // Respond in JSON format
     res.json(dogs);
   } catch (error) {
+    // Error handling
     res.status(500).json({ error: 'Failed to fetch dogs' });
   }
 });
