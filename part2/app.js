@@ -20,7 +20,7 @@ app.use(session({
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Redirect default page
+// Default root handler
 app.get('/', (req, res) => {
   // Redirect to role dashboards
   if(req.session?.user) {
@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
     } else if(req.session.user.role === 'walker'){
       return res.redirect('/walker');
     }
-  } // Otherwise login page
+  } // Otherwise redirect to login page
   res.sendFile(path.join(__dirname, '/public'));
 });
 
