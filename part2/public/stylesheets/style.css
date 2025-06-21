@@ -177,6 +177,7 @@ h2 {
 table {
     width: 50%;
     margin-top: 20px;
+    background-color: white;
 }
 
 th {
