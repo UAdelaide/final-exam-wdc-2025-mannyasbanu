@@ -24,12 +24,13 @@ app.use(express.static(path.join(__dirname, '/public')));
 // Middleware functions
 function loginCheck(req, res, next){
   if(req.session.user) return next();
-  res.redirect('')
+  res.redirect('/');
 }
 
 function roleCheck(role){
   return function(req, res, next){
     if(req.session.user.role == role) return next();
+    res.redirect('/');
   }
 }
 
