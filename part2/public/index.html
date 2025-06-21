@@ -66,13 +66,13 @@
         // Fetch dogs on start
         onMounted(() => {
           loadDogs();
-        })
+        });
 
         data() {
-        return {
-          message: 'Welcome to the Dog Walking Service!'
-        };
-      }
+          return {
+            message: 'Welcome to the Dog Walking Service!'
+          };
+        }
       }
     }).mount('#app');
   </script>
