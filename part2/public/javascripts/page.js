@@ -174,6 +174,9 @@ function downvote(index) {
 }
 
 
+// LOGIN EVENT LISTENER
+
+
 function login(){
 
     let user = {
