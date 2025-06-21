@@ -177,7 +177,8 @@ function login(username, password){
     fetch('/api/users/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify()
+        body: JSON.stringify({ username, password }),
+        credentials: 'include'
     })
 
     console.log("Sending login request");
