@@ -175,13 +175,13 @@ function downvote(index) {
 
 
 // LOGIN EVENT LISTENER
+document.getElementById('')
 
-
-function login(){
+function login(username, password){
 
     let user = {
         user: username,
-        pass: document.getElementById('password').value
+        pass: password
     };
 
     // Create AJAX Request
