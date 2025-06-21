@@ -15,14 +15,8 @@ async function login(username, password){
         if(!res.ok){
             throw new Error(data.error || 'Login failed');
         }
-        // Redirect according to role
-        if(data.role === 'owner'){
-            window.location.href = '/owner';
-        }else if(data.role === 'walker'){
-            window.location.href = '/walker';
-        }else {
-            throw new Error('Unknown user role');
-        }
+        // Reload page
+        
     } catch (error){
         console.error('Login error: ', error);
         alert('Login failed');
