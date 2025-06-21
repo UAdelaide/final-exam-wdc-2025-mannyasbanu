@@ -37,11 +37,11 @@ function roleCheck(role){
 
 // Serve owner dashboard
 app.get('/owner', loginCheck(), roleCheck('owner'), (req, res) => {
-  res.send
+  res.sendFile(path.join(__dirname, 'private', 'owner-dashboard.html'));
 })
 
 // Serve walker dashboard
-app.get('/walker')
+app.get('/walker'), loginCheck(), roleCheck
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
