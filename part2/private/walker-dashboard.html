@@ -58,6 +58,8 @@
               method: 'GET',
               credentials: 'include'
             });
+            // Validate response
+            if(!res)
             // Get user details
             user = await res.json();
             // Return user id
