@@ -77,7 +77,7 @@
             });
             // Parse and return
             const img = await res.json();
-            return img.message
+            return img.message;
           } catch (error) {
             console.error('Failed to fetch dogs: ', error);
           }
