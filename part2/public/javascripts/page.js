@@ -178,6 +178,7 @@ function downvote(index) {
 document.getElementById('login-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Ignore default submit method
     const form = new FormData(event.target);
+    cont username = form.get('username');
     
 })
 
