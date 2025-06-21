@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Auth middleware
-{ loginCheck, roleCheck } = require()
+const { loginCheck, roleCheck } = require('./auth');
 
 // Default root handler
 app.get('/', (req, res) => {
