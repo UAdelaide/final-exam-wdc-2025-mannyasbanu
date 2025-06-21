@@ -180,6 +180,7 @@ function login(username, password){
         body: JSON.stringify({ username, password }),
         credentials: 'include'
     })
+    .then(response => response.json)
 
     console.log("Sending login request");
 
