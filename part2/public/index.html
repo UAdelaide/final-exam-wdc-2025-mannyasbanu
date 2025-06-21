@@ -50,7 +50,19 @@
         // Store dogs
         const dogs = ref([]);
         // Fetch dogs
-        async function 
+        async function loadDogs(){
+          try {
+            // Send dogs get request
+            const res = await fetch('/api/dogs', {
+              method: 'GET',
+              credentials: 'include'
+            });
+            // Parse and store in dog list
+            dogs.value = await res.json();
+          } catch (error) {
+            console.error('Failed to fetch dogs: ', error);
+          }
+        }
       }
 
       data() {
