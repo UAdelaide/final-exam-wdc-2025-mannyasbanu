@@ -20,12 +20,12 @@ router.get('/mine', loginCheck, async(req, res) => {
   }
 });
 
-// GET request for dogs for homepage
+// GET request for all dogs
 router.get('/', async (req, res, next) => {
   try {
     // Query rows
     const [rows] = await db.query(`
-      SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username
+      SELECT , Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username
       FROM Dogs
       INNER JOIN Users ON Dogs.owner_id = Users.user_id;
     `);
