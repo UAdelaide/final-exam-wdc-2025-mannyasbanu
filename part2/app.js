@@ -32,7 +32,7 @@ app.use('/api/users', userRoutes);
 
 // Check if logged in
 function loginCheck(req, res, next){
-  if(req.session.user) return next();
+  if(req.session && req.session.user) return next();
   res.redirect('/');
 }
 
