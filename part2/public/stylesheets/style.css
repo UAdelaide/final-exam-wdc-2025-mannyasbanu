@@ -156,7 +156,7 @@ section {
 }
 
 /* LOGIN FORM */
-.login-form div, .login-form button {
+#login-form div, .login-form button {
     margin-top: 10px;
     max-width: 400px;
 }
