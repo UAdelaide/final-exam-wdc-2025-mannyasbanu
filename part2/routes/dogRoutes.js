@@ -2,6 +2,12 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
 
-router.get('/', loginCheck)
+router.get('/', loginCheck, async(req, res) => {
+  try {
+    
+  } catch (error) {
+
+  }
+})
 
 module.exports = router;
