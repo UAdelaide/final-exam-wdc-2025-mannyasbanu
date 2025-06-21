@@ -51,8 +51,6 @@ app.get('/', (req, res) => {
   } // Otherwise login page
   res.sendFile(path.join(__dirname, '/public')));
 });
-app.use(express.static(
-
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
