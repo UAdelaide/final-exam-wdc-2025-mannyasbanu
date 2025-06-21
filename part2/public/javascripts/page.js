@@ -174,11 +174,7 @@ function downvote(index) {
 }
 
 function login(username, password){
-
-    let user = {
-        username: username,
-        password: password
-    };
+    fetch('/api')
 
     console.log("Sending login request");
 
