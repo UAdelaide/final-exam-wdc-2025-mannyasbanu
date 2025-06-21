@@ -25,6 +25,9 @@ app.use(express.static(path.join(__dirname, '/public')));
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 
+app.use('/api/walks', walkRoutes);
+app.use('/api/users', userRoutes);
+
 // Middleware for protected dashboards
 // Check if logged in
 function loginCheck(req, res, next){
@@ -49,9 +52,6 @@ app.get('/owner', loginCheck(), roleCheck('owner'), (req, res) => {
 app.get('/walker'), loginCheck(), roleCheck('walker'), (req, res) => {
   res.sendFile(path.join(__dirname, 'private', 'walker-dashboard.html'));
 };
-
-app.use('/api/walks', walkRoutes);
-app.use('/api/users', userRoutes);
 
 // Export the app instead of listening here
 module.exports = app;
