@@ -57,7 +57,7 @@ router.post('/login', async (req, res) => {
       role: user.role
     };
 
-    // Return user role
+    // Return user role and name
     res.json({ role: user.role });
 
   } catch (error) {
