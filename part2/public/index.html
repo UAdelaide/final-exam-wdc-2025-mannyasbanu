@@ -72,6 +72,7 @@
         async function getDogImg(){
           const res = await fetch('https://dog.ceo/api/breeds/image/random');
           const img = await res.json();
+          return img.message;
         }
         // Fetch dogs on start
         onMounted(() => {
