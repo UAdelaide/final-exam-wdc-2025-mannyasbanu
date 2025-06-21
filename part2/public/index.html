@@ -66,6 +66,8 @@
         async function login(){
           console.log("Sending login request");
           try{
+              // Reset errors
+              loginError.value = null;
               // Post login request
               const res = await fetch('/api/users/login', {
                   method: 'POST',
