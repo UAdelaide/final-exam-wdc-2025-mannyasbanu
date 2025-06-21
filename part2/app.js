@@ -36,6 +36,9 @@ function loginCheck(req, res, next){
 // Check for role match
 function roleCheck(role){
   return function(req, res, next){
+    if(!req.session){
+      return 
+    }
     if(req.session.user.role == role) return next();
     res.status(403).send('Access denied');
   };
