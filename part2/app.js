@@ -21,12 +21,13 @@ app.use(session({
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
-// Login check
+// Check if logged in
 function loginCheck(req, res, next){
   if(req.session.user) return next();
   res.redirect('/');
 }
 
+// Check for role match
 function roleCheck(role){
   return function(req, res, next){
     if(req.session.user.role == role) return next();
