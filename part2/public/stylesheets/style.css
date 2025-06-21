@@ -156,6 +156,6 @@ section {
 }
 
 /* LOGIN FORM */
-.login-form {
-    
+.login-form input {
+    display: inline-block;
 }
