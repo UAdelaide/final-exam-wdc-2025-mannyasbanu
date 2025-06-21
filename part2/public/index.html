@@ -63,10 +63,10 @@
               credentials: 'include'
             });
             // Parse and store in dog list
-            const dogData = await res.json();
+            dogs.value = await res.json();
             // Add image to each dog element
             dogData.forEach(element => {
-              
+
             });
           } catch (error) {
             console.error('Failed to fetch dogs: ', error);
