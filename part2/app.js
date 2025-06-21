@@ -27,7 +27,9 @@ function loginCheck(req, res, next){
 }
 
 function roleCheck(role){
-  return function(req,res,next)
+  return function(req, res, next){
+    if()
+  }
 }
 
 // Serve owner dashboard
