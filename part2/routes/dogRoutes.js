@@ -25,7 +25,7 @@ router.get('/', async (req, res, next) => {
   try {
     // Query rows
     const [rows] = await db.query(`
-      SELECT Dogs.dog_id, Dogs.name AS dog_name, Dogs.size, Users.user_id
+      SELECT Dogs.dog_id, Dogs.name, Dogs.size, Users.user_id
       FROM Dogs
       INNER JOIN Users ON Dogs.owner_id = Users.user_id;
     `);
