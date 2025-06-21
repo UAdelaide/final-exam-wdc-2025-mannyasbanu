@@ -189,10 +189,10 @@ async function login(username, password){
         const data = await res.json();
         // Validate response
         if(!response.ok){
-            throw new Error('Login failed');
+            throw new Error(data.error || 'login');
         }
         // Redirect according to role
-        
+
     }
 
     // Create AJAX Request
