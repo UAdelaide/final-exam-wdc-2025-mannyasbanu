@@ -41,7 +41,7 @@ function roleCheck(role){
     }
     if(req.session.user.role === role) return next();
     res.status(403).send('Access denied');
-    res.stat
+    res.status(403).send('Access denied');
   };
 }
 
