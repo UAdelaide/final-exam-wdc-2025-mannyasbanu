@@ -156,11 +156,11 @@ section {
 }
 
 /* LOGIN FORM */
-#login-form div, .login-form button {
+#login-form div, #login-form button {
     margin-top: 10px;
     max-width: 400px;
 }
 
-.login-form input {
+#login-form input {
     background-color: white;
 }
