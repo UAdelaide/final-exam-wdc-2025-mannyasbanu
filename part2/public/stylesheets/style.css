@@ -157,8 +157,5 @@ section {
 
 /* LOGIN FORM */
 .login-form div {
-    display: inline-block;
-    width: 100%;
-    size: 100px;
-    background-color: red;
+    margin-top: 10px;
 }
