@@ -52,14 +52,16 @@ function roleCheck(role){
   };
 }
 
-// Protected routes
+// Routes
+const walkRoutes = require('./routes/walkRoutes');
+const userRoutes = require('./routes/userRoutes');
+app.use('/api/walks', walkRoutes);
+app.use('/api/users', userRoutes);
 
-// Serve owner dashboard
+// Protected routes
 app.get('/owner', loginCheck, roleCheck('owner'), (req, res) => {
   res.sendFile(path.join(__dirname, 'private/owner-dashboard.html'));
 });
-
-// Serve walker dashboard
 app.get('/walker', loginCheck, roleCheck('walker'), (req, res) => {
   res.sendFile(path.join(__dirname, 'private/walker-dashboard.html'));
 });
