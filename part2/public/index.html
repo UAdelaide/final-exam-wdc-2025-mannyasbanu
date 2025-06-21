@@ -65,7 +65,9 @@
             // Store dogs
             const dogData = await res.json();
             // Fetch and add image to each dog
-            
+            for (const dog of dogData){
+              const dogImg = await fetch
+            }
 
             dogs.value.forEach(dog => {
               dog.imageUrl = getDogImg();
