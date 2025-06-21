@@ -86,7 +86,7 @@
         const error = ref('');
 
         // Logout function
-        const logout = async () {
+        const logout = async () => {
           try {
             // Send logout post request
             const res = await fetch('/api/users/logout', {
