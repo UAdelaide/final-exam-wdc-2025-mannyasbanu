@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser');
 
 const app = express();
 
-// Session setup
+// Session and cookie setup
 app.use(session({
   secret: 'aVerySecretKey',
   resave: false,
