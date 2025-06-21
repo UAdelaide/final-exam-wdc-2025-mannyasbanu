@@ -97,8 +97,7 @@
             // Parse and store in dog list
             dogs.value = await res.json();
           } catch (error) {
-            console.error('Fetch error: ', error);
-            alert('Failed to fetch dogs');
+            console.error('Failed to fetch dogserror: ', error);
           }
         }
 
