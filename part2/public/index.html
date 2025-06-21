@@ -56,6 +56,10 @@
     createApp({
       setup(){
         const message = ref('Welcome to the Dog Walking Service!');
+        // Login form data
+        const loginForm = ref({
+          username: ''
+        })
         const loginError = ref(null);
         // Store dogs
         const dogs = ref([]);
