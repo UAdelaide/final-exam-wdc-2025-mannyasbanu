@@ -4,17 +4,14 @@ require('dotenv').config();
 
 // Session and cookies
 const session = require('express-session');
-const cookieParser = require('cookie-parser');
 
 const app = express();
 
 // Session and cookie setup
-app.use(cookieParser());
 app.use(session({
   secret: 'aVerySecretKey',
   resave: false,
-  saveUninitialized: true,
-  cookie: { maxAge: 1000000 }
+  saveUninitialized: true
 }));
 
 // Middleware
