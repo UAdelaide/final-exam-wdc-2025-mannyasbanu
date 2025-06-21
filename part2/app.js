@@ -9,7 +9,10 @@ const app = express();
 
 // Session setup
 app.use(session)({
-  
+  secret:
+  resave:
+  saveUninitialized: true,
+  cookie: { maxAge: 10}
 })
 
 // Middleware
