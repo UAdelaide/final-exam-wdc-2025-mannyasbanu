@@ -94,7 +94,7 @@
               method: 'GET',
               credentials: 'include'
             });
-            // Store in dog list
+            // Parse and store in dog list
             dogs.value = await res.json();
           } catch (error) {
             console.error('Fetch error: ', error);
