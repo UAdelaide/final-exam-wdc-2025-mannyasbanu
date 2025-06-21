@@ -156,6 +156,8 @@ section {
 }
 
 /* LOGIN FORM */
+
+
 #login-form div, #login-form button {
     margin-top: 10px;
     max-width: 400px;
@@ -166,6 +168,10 @@ section {
 }
 
 /* DOG TABLE */
+h2 {
+    margin-top: 50px;
+}
+
 table {
     width: 50%;
     margin-top: 20px;
