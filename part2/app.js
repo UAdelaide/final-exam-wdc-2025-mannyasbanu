@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Default root handler
 app.get('/', (req, res) => {
   // Redirect to role dashboards
-  if(req.session?.user) {
+  if(req.session %.user) {
     if(req.session.user.role === 'owner'){
       return res.redirect('/owner');
     } else if(req.session.user.role === 'walker'){
