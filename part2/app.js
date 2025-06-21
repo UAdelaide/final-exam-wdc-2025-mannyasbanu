@@ -28,7 +28,7 @@ function loginCheck(req, res, next){
 
 function roleCheck(role){
   return function(req, res, next){
-    if()
+    if(req.session.user.role == role) return next();
   }
 }
 
