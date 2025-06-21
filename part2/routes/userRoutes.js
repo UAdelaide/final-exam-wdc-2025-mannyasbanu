@@ -51,7 +51,8 @@ router.post('/login', async (req, res) => {
     const user = rows[0];
 
     // Store cookie
-    const maxAge = 10000
+    const age = 100000;
+    const expiry = Date.now
 
     // Store session information
     req.session.user = {
