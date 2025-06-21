@@ -47,6 +47,7 @@
     const { createApp } = Vue;
     createApp({
       setup(){
+        const message - ref('Welcome to the Dog Walking Service!');
         // Store dogs
         const dogs = ref([]);
         // Fetch dogs
@@ -71,7 +72,7 @@
 
       data() {
         return {
-          
+
         };
       }
     }).mount('#app');
