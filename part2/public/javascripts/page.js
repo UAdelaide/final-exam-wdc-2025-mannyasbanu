@@ -174,15 +174,6 @@ function downvote(index) {
 }
 
 
-// LOGIN EVENT LISTENER
-document.getElementById('login-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Ignore default submit method
-    const form = new FormData(event.target);
-    const username = form.get('username');
-    const password = form.get('password');
-    // 
-})
-
 function login(username, password){
 
     let user = {
