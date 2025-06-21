@@ -48,7 +48,7 @@
         const walks = ref([]);
         const message = ref('');
         const error = ref('');
-        const user = ref('');
+        const user = ref();
 
         // Get current user id
         async function getCurrentUser(){
@@ -58,8 +58,8 @@
               method: 'GET',
               credentials: 'include'
             });
-            // Get user id
-            user
+            // Get user details
+            user = await res.json();
           } catch (error) {
 
           }
