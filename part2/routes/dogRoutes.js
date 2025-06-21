@@ -19,7 +19,7 @@ router.get('/', loginCheck, async(req, res) => {
   }
 });
 
-// GET request for /api/dogs
+// GET request for dogs for homepage
 router.get('/', async (req, res, next) => {
   try {
     // Query rows
