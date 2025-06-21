@@ -39,9 +39,11 @@ function roleCheck(role){
   };
 }
 
-// Redirect user according to role
+// Redirect default page
 app.get('/', (req, res) => {
-  if(req.session?)
+  if(req.session?.user) {
+    // Redirect roles
+  }
 })
 app.use(express.static(path.join(__dirname, '/public')));
 
