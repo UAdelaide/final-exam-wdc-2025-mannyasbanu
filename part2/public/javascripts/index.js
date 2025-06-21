@@ -23,7 +23,6 @@ async function login(username, password){
         }else {
             throw new Error('Unknown user role');
         }
-        alert('Welcome ', data.username);
     } catch (error){
         console.error('Login error: ', error);
         alert('Login failed');
