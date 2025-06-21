@@ -47,9 +47,7 @@ const userRoutes = require('./routes/userRoutes');
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
-// Middleware for protected dashboards
-
-
+// Protected routes
 
 // Serve owner dashboard
 app.get('/owner', loginCheck, roleCheck('owner'), (req, res) => {
