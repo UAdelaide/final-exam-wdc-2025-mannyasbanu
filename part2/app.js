@@ -39,19 +39,6 @@ function roleCheck(role){
   };
 }
 
-// Redirect default page
-app.get('/', (req, res) => {
-  // Redirect to role dashboards
-  if(req.session?.user) {
-    if(req.session.user.role === 'owner'){
-      return res.redirect('/owner');
-    } else if(req.session.user.role === 'walker'){
-      return res.redirect('/walker');
-    }
-  } // Otherwise login page
-  res.sendFile(path.join(__dirname, '/public')));
-});
-
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
