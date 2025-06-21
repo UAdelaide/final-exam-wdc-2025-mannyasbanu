@@ -42,6 +42,9 @@ function roleCheck(role){
 // Redirect default page
 app.get('/', (req, res) => {
   if(req.session?.user) {
+    if(req.session.user.role === 'owner'){
+
+    } else if()
     // Redirect to role dashboards
     return res.redirect('/owner');
     // Otherwise login page
