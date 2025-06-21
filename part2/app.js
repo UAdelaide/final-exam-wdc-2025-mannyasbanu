@@ -31,9 +31,11 @@ app.get('/', (req, res) => {
     } else {
       req.session.destroy();
     }
-  } // Otherwise redirect to login page
-  res.sendFile(path.join(__dirname, '/public/index.html'));
+  }
 });
+
+ // Otherwise redirect to login page
+  res.sendFile(path.join(__dirname, '/public/index.html'));
 
 // Authentication middleware
 function loginCheck(req, res, next){
