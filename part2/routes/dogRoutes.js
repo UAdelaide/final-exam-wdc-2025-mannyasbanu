@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
-const loginCheck = require('../app');
+const { loginCheck } = require('../middleware/auth');
 
 router.get('/', loginCheck, async(req, res) => {
   try {

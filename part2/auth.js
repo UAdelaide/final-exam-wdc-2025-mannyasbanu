@@ -13,4 +13,4 @@ function roleCheck(role){
   };
 }
 
-module.exports
+module.exports = { loginCheck, roleCheck };
