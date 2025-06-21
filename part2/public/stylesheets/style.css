@@ -156,7 +156,7 @@ section {
 }
 
 /* LOGIN FORM */
-.login-container input {
+.login-container label {
     display: inline-block;
     width: 100%;
     size: 100px;
