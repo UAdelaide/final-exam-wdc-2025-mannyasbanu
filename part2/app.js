@@ -41,7 +41,9 @@ app.get('/owner', loginCheck(), roleCheck('owner'), (req, res) => {
 })
 
 // Serve walker dashboard
-app.get('/walker'), loginCheck(), roleCheck
+app.get('/walker'), loginCheck(), roleCheck('walker'), (req, res) => {
+  res.sendFile(path.join(__dirname, 'private', 'walker-dashboard.html'));
+};
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
