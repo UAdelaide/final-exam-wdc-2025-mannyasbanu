@@ -70,17 +70,7 @@
         }
         // Fetch random dog image
         async function getDogImg(){
-          try {
-            // Send get request to api
-            const res = await fetch('https://dog.ceo/api/breeds/image/random', {
-              method: 'GET'
-            });
-            // Parse and return
-            const img = await res.json();
-            return img.message;
-          } catch (error) {
-            console.error('Failed to fetch dogs: ', error);
-          }
+          const res = 
         }
         // Fetch dogs on start
         onMounted(() => {
