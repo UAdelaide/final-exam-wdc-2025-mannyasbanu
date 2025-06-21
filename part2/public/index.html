@@ -72,11 +72,10 @@
         async function getDogImg(){
           try {
             // Send get request to api
-            const res = await fetch('/api/dogs', {
-              method: 'GET',
-              credentials: 'include'
+            const res = await fetch('https://dog.ceo/api/breeds/image/random', {
+              method: 'GET'
             });
-            // Parse and store in dog list
+            // Parse and return
             dogs.value = await res.json();
           } catch (error) {
             console.error('Failed to fetch dogs: ', error);
