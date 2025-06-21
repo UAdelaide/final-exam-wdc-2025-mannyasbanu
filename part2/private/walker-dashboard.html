@@ -62,9 +62,10 @@
             if(!res.ok){
               throw new Error('Failed to fetch user data')
             }
-            // Get user details
+            // Get and store user details
             const userData = await res.json();
             user.value = userData;
+            // Error handling
           } catch (error) {
             console.error(error);
           }
