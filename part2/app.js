@@ -52,13 +52,6 @@ function roleCheck(role){
   };
 }
 
-// Routes
-const walkRoutes = require('./routes/walkRoutes');
-const userRoutes = require('./routes/userRoutes');
-
-app.use('/api/walks', walkRoutes);
-app.use('/api/users', userRoutes);
-
 // Protected routes
 
 // Serve owner dashboard
