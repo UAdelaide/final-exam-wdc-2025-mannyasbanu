@@ -57,8 +57,8 @@ router.post('/login', async (req, res) => {
       role: user.role
     };
 
-    // Return user role and name
-    res.json({ role: user.role });
+    // Return username and role
+    res.json({ username, role: user.role });
 
   } catch (error) {
     res.status(500).send('Server error');
