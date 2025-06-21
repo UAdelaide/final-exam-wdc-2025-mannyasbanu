@@ -158,4 +158,5 @@ section {
 /* LOGIN FORM */
 .login-form input {
     display: inline-block;
+    width: 100%;
 }
