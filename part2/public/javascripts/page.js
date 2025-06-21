@@ -180,7 +180,7 @@ function login(username, password){
         password: password
     };
 
-    console.log("made it here2");
+    console.log("Sending login request");
 
     // Create AJAX Request
     var xmlhttp = new XMLHttpRequest();
@@ -214,7 +214,7 @@ function logout(){
 
 // LOGIN EVENT LISTENER
 document.getElementById('login-form').addEventListener('submit', function(event) {
-    console.log("made it here1");
+    console.log("Submitting login form");
     // Ignore default submit method
     event.preventDefault();
     // Get form data
