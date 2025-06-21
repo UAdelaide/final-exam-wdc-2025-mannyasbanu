@@ -63,7 +63,8 @@
               credentials: 'include'
             });
             // Parse and store in dog list
-            dogs.value = await res.json();
+            const dogData = await res.json();
+            
           } catch (error) {
             console.error('Failed to fetch dogs: ', error);
           }
