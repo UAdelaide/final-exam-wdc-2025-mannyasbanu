@@ -9,11 +9,11 @@ const app = express();
 
 // Session setup
 app.use(session({
-  secret: 'secretKeyExample'
+  secret: 'aVerySecretKey',
   resave: false,
   saveUninitialized: true,
   cookie: { maxAge: 1000000 }
-}))
+}));
 
 // Middleware
 app.use(express.json());
