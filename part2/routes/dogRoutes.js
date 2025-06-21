@@ -9,7 +9,7 @@ router.get('/', loginCheck, async(req, res) => {
     `);
     res.json(dogs);
   } catch (error) {
-    res.status(500).json
+    res.status(500).json({ error: 'Failed to fetch dogs' });
   }
 })
 
