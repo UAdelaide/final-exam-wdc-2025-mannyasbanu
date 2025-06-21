@@ -50,12 +50,6 @@ router.post('/login', async (req, res) => {
     }
     const user = rows[0];
 
-    // Store cookie
-    const age = 100000;
-    const expiry = Date.now() + age;
-    res.cookie('name', username, { age });
-    res.cookie('expiresAt', expiry.toString(), { age });
-
     // Store session information
     req.session.user = {
       user_id: user.user_id,
@@ -73,8 +67,6 @@ router.post('/login', async (req, res) => {
 
 // POST logout
 router.post('/logout', (req, res) => {
-  res.clearCookie('name');
-  res.clearCookie('expiresAt');
   req.session.destroy(() => {
     res.redirect('/');
   });
