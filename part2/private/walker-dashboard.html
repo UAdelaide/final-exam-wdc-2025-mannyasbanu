@@ -59,7 +59,9 @@
               credentials: 'include'
             });
             // Validate response
-            if(!res)
+            if(!res.ok){
+              throw new Error('Failed to fetch user')
+            }
             // Get user details
             user = await res.json();
             // Return user id
