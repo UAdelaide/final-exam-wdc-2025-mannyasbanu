@@ -181,6 +181,7 @@ function login(username, password){
     };
 
     console.log('we made it here', user);
+    break;
 
     // Create AJAX Request
     var xmlhttp = new XMLHttpRequest();
