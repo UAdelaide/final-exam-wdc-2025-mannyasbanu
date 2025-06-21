@@ -63,9 +63,9 @@
             console.error('Failed to fetch dogs: ', error);
           }
         }
-        // Load d
+        // Fetch dogs on start
         onMounted(() => {
-
+          loadDogs();
         })
       }
 
