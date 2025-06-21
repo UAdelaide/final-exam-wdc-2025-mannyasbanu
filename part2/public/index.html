@@ -62,10 +62,10 @@
               method: 'GET',
               credentials: 'include'
             });
-            // Parse and store in dog list
-            dogs.value = await res.json();
+            // Store dogs
+            const dogData = await res.json();
             // Fetch dog images
-            const dogImages = 
+            const dogImages =
             // Add image to each dog element
             dogs.value.forEach(dog => {
               dog.imageUrl = getDogImg();
