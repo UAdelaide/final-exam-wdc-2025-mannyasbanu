@@ -215,6 +215,7 @@ function logout(){
 document.getElementById('login-form').addEventListener('submit', function(event) {
     // Ignore default submit method
     event.preventDefault();
+    // Get form data
     const form = new FormData(event.target);
     const username = form.get('username');
     const password = form.get('password');
