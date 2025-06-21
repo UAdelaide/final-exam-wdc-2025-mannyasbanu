@@ -49,9 +49,9 @@ app.get('/', (req, res) => {
       return res.redirect('/walker');
     }
   } // Otherwise login page
-  res.sendFile(path)
-})
-app.use(express.static(path.join(__dirname, '/public')));
+  res.sendFile(path.join(__dirname, '/public')));
+});
+app.use(express.static(
 
 
 // Routes
